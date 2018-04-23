@@ -1,7 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abd14940-8da5-41d4-99b5-8c9b3bab86ad" name="Default" comment="" />
+    <list default="true" id="abd14940-8da5-41d4-99b5-8c9b3bab86ad" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.idea/repti-garde.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.idea/symfony2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/AppCache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/AppKernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/change_password.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/commands.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/Group.couchdb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/Group.mongodb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/Group.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/User.couchdb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/User.mongodb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine-mapping/User.orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/doctrine_group.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/email_confirmation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/flash_notifications.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/group.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/listeners.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/mailer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/profile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/registration.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/resetting.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/all.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/change_password.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/group.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/profile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/registration.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/resetting.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/routing/security.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/security.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/storage-validation/couchdb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/storage-validation/mongodb.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/storage-validation/orm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/username_form_type.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/util.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/validation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/config/validator.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/adding_invitation_registration.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/canonicalizer.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/command_line_tools.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/configuration_reference.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/controller_events.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/custom_storage_layer.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/doctrine.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/emails.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/form_type.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/groups.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/index.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/logging_by_username_or_email.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/overriding_forms.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/overriding_templates.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/overriding_validation.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/routing.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/doc/user_manager.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.af.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ar.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.bg.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.bn.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.bn_BD.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ca.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.cs.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.da.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.de.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.el.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.eo.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.es.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.et.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.eu.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.fa.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.fi.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.fr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.gl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.he.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.hr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.hu.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.id.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.it.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ja.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ky.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.lb.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.lt.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.lv.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.nb.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.nl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.pl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.pt.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.pt_BR.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ro.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.ru.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.sk.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.sl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.sr_Latn.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.sv.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.th.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.tr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.uk.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.vi.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/FOSUserBundle.zh_CN.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ar.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.bg.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.bn.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.bn_BD.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ca.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.cs.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.da.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.de.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.el.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.eo.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.es.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.eu.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.fa.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.fi.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.fr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.he.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.hr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.hu.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.id.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.it.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ja.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ky.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.lt.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.lv.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.nb.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.nl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.pl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.pt.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.pt_BR.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ro.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.ru.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.sk.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.sl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.sr_Latn.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.sv.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.th.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.tr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.uk.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.vi.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/translations/validators.zh_CN.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/ChangePassword/change_password.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/ChangePassword/change_password_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/edit.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/edit_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/list.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/list_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/new.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/new_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/show.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Group/show_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Profile/edit.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Profile/show.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Registration/check_email.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Registration/email.txt.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Registration/register.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/check_email.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/email.txt.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/request.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/request_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/reset.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Resetting/reset_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Security/login.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/FOSUserBundle/views/layout.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/views/base.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/Resources/views/default/index.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/config.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/config_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/config_prod.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/config_test.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/parameters.yml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/routing_dev.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/security.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/app/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/bin/console" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/bin/symfony_requirements" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/src/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/src/AppBundle/AppBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/src/AppBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/src/AppBundle/Entity/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/tests/AppBundle/Controller/DefaultControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/var/SymfonyRequirements.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/var/cache/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/var/logs/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/var/sessions/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/app_dev.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/apple-touch-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../repti-garde/web/robots.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,30 +224,40 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="114">
+              <caret line="6" column="94" lean-forward="false" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php">
+      <file leaf-file-name="ProfileType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProfileType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+            <state relative-caret-position="228">
+              <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
-                <element signature="e#77#117#0#PHP" expanded="true" />
+                <element signature="e#72#112#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,19 +266,23 @@
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="263">
+              <caret line="75" column="36" lean-forward="false" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+              <folding>
+                <marker date="1524517055502" expanded="true" signature="2094:2319" ph="fos_user: &lt;4 keys&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <marker date="1524517074444" expanded="true" signature="155:1300" ph="services: &lt;3 keys&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,23 +290,24 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/ProfileType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
       </list>
     </option>
   </component>
@@ -94,8 +319,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2014" />
-    <option name="y" value="40" />
     <option name="width" value="1247" />
     <option name="height" value="682" />
   </component>
@@ -117,7 +340,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,6 +358,27 @@
               <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FOSUserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FOSUserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
@@ -157,13 +401,55 @@
             <path>
               <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="friendsofsymfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user-bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Type" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Garde-Reptile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Garde-Reptile" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,14 +486,15 @@
       <workItem from="1523909306949" duration="1153000" />
       <workItem from="1523910509566" duration="1760000" />
       <workItem from="1524504691663" duration="430000" />
+      <workItem from="1524516204522" duration="2564000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3343000" />
+    <option name="totallyTimeSpent" value="5907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2014" y="40" width="1247" height="682" extended-state="0" />
+    <frame x="0" y="0" width="1247" height="682" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24979855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -240,6 +527,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <marker date="1524517055502" expanded="true" signature="2094:2319" ph="fos_user: &lt;4 keys&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <marker date="1524517074444" expanded="true" signature="155:1300" ph="services: &lt;3 keys&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -301,49 +624,8 @@
         <state relative-caret-position="380">
           <caret line="20" column="66" lean-forward="false" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
           <folding>
-            <element signature="e#7#66#0#PHP" expanded="true" />
+            <element signature="e#7#66#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="1" lean-forward="false" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding>
-            <element signature="e#77#117#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -356,14 +638,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#77#117#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/ProfileType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#72#112#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/ProfileFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="75" column="36" lean-forward="false" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
+          <folding>
+            <marker date="1524517055502" expanded="true" signature="2094:2319" ph="fos_user: &lt;4 keys&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1524517074444" expanded="true" signature="155:1300" ph="services: &lt;3 keys&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="94" lean-forward="false" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
