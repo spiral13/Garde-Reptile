@@ -21,6 +21,15 @@ Comment récuperer le projet:
 - Update de la base :      php bin/console doctrine:schema:update --force
 - Lancer le serveur :     php bin/console server:start
 
+Créer un user super admin :
+
+php bin/console fos:user:create
+entrer un username et un password
+
+php bin/console fos:user:promote
+entrer le username du user créer juste avant
+entrer le role : ROLE_SUPER_ADMIN
+
 
 # Projet ressources docs ...
 
