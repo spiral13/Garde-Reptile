@@ -38,16 +38,10 @@ class User extends BaseUser
      */
     protected $ville;
 
-
-//------------------------------------------------------------------------------------------------------TEST AVATAR
-
-
-
-
-
-
-//------------------------------------------------------------------------------------------------------TEST AVATAR
-
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $description;
 
 
     public function __construct()
