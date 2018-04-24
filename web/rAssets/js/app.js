@@ -31339,7 +31339,7 @@ var App = function App() {
   return _react2.default.createElement(
     'div',
     { id: 'hello' },
-    'Hello World!',
+    'Hello World !',
     _react2.default.createElement(_Example2.default, null)
   );
 };
