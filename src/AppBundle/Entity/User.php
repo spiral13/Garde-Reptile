@@ -28,7 +28,7 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", length=255)
      *
-     * @Assert\NotBlank(message="Merci d'entrer votre ville.", groups={"Registration", "Profile"})
+     * @Assert\NotBlank(message="Merci d'entrer votre ville.", groups={"Profile", "Profile"})
      * @Assert\Length(
      *     min=3,
      *     max=255,
@@ -39,19 +39,9 @@ class User extends BaseUser
     protected $ville;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    protected $photo;
-
-    /**
      * @ORM\Column(type="text")
      */
     protected $description;
-
-    /**
-     * @ORM\Column(name="is_active", type="boolean")
-     */
-    protected $isActive;
 
 
     public function __construct()
@@ -59,4 +49,46 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+
+    /**
+     * @param mixed $ville
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+    }
+
+
 }

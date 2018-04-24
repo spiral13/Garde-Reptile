@@ -10,10 +10,6 @@ class RegistrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('ville')
-            ->add('photo')
-            ->add('description')
-            ->add('isActive');
     }
 
     public function getParent()
@@ -24,26 +20,6 @@ class RegistrationType extends AbstractType
     public function getBlockPrefix()
     {
         return 'app_user_registration';
-    }
-
-    public function getVille()
-    {
-        return $this->getBlockPrefix();
-    }
-
-    public function getPhoto()
-    {
-        return $this->getBlockPrefix();
-    }
-
-    public function getDescription()
-    {
-        return $this->getBlockPrefix();
-    }
-
-    public function getIsActive()
-    {
-        return $this->getBlockPrefix();
     }
 
 }
