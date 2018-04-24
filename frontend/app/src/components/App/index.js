@@ -14,7 +14,7 @@ import Example from 'src/containers/Example';
  */
 const App = () => (
   <div id="hello">
-    Hello World!
+    Hello World !
     <Example />
   </div>
 );
