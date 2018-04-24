@@ -5,12 +5,13 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="rAssets/css/app.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/minty/bootstrap.min.css">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
     <p>TEST BASE</p>
-
+	<div id="root"></div>
 
 
     {#<div>#}
@@ -27,5 +28,7 @@
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+		<script src="rAssets/js/app.js"></script>
+		<script>require('src/index');</script>
     </body>
 </html>
