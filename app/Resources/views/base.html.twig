@@ -4,10 +4,12 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="rAssets/css/app.css">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
     <p>TEST BASE</p>
+	<div id="root"></div>
 
 
 
@@ -24,6 +26,10 @@
 
 
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+		<script src="rAssets/js/app.js"></script>
+		<script>require('src/index');</script>
+		{% endblock %}
+
     </body>
 </html>
