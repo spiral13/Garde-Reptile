@@ -4,19 +4,23 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
+<h3 class="mt-5 ml-5 pl-3">Connectez-vous sur ReptiGarde</h3>
+
+<div class="container mt-2 mb-5 p-5 border rounded">
 <form action="{{ path("fos_user_security_check") }}" method="post">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
 
     <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+    <input type="text" class="form-control mb-5" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
 
     <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+    <input type="password" class="form-control" id="password" name="_password" required="required" autocomplete="current-password" />
 
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <input type="checkbox"  id="remember_me" name="_remember_me" value="on" />
     <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <br>
+    <input type="submit" class="btn btn-primary mt-2" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
+</div>
