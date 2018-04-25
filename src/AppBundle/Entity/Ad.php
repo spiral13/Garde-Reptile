@@ -26,9 +26,15 @@ class Ad
     private $id;
 
     /**
+     * @ORM\Column(name="title", type="string")
+     */
+    private $title;
+
+    /**
      * @ORM\Column(name="ville", type="string")
      */
     private $ville;
+
 
     /**
      * @ORM\Column(name="service", type="string")
@@ -94,6 +100,23 @@ class Ad
     public function setService($service)
     {
         $this->service = $service;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
     }
 
     /**

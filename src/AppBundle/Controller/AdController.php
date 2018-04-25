@@ -11,7 +11,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Form\AdType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use AppBundle\Entity\Ad;
@@ -49,6 +49,7 @@ class AdController extends Controller
 
     /**
      * @Route("/ad/create", name="ad_create")
+     *
      */
     public function CreateAction(Request $request)
     {
@@ -61,8 +62,7 @@ class AdController extends Controller
         $formview = $form->createView();
 
         return $this->render('templates/createAd.html.twig', array(
-            'form'=>$formview
-        ));
+            'form'=>$formview));
 
     }
 

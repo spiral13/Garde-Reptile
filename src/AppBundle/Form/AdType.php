@@ -16,12 +16,15 @@ class AdType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('ville', TextType::class)
-            ->add('service', TextType::class)
-            ->add('content', TextType::class)
+        $builder->add('title', TextType::class)
+            ->add('ville', TextType::class)
             ->add('nbVisit', NumberType::class)
+            ->add('service', TextType::class)
+            ->add('content')
             ->add('date', DateType::class);
-    }/**
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
