@@ -21,12 +21,23 @@
                 </li>
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Demandes</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Créer votre annonce</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link ml-5" href="{{ path('fos_user_profile_show') }}">Mon profil</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                 </li>
+
     {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Inscription</a>
@@ -37,6 +48,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>
+
     {% endif %}
             </ul>
         </div>
@@ -60,7 +72,15 @@
 
         <div id="root"></div>
 
-        {% block javascripts %}{% endblock %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="fixed-bottom">
+            <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Interface Admin</a>
+        </div>
+    {% endif %}
+
+
+    {% block javascripts %}{% endblock %}
 		<script src="rAssets/js/app.js"></script>
 		<script>require('src/index');</script>
     </body>
