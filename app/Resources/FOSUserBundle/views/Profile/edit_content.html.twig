@@ -18,15 +18,15 @@
 
     <div class="form-group">{{ form_row(form.description, {'attr': {'class':'form-control'}})  }}</div>
 
-    {% block fos_user_content %}
-        {% include "@FOSUser/ChangePassword/change_password_content.html.twig" %}
-    {% endblock fos_user_content %}
-
+    <div class="form-group">{{ form_row(form.current_password, {'attr': {'class':'form-control'}})  }}</div>
 
     <br>
 
-    {#<div>#}
-        {#<input type="submit" value="{{ 'profile.edit.submit'|trans }}" />#}
-    {#</div>#}
+    <div>
+        <input class="btn btn-primary btn-lg mb-4" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+    </div>
 {{ form_end(form) }}
+
+    <a class="btn btn-primary btn-lg" href="{{ path('fos_user_change_password') }}" role="button">Modifier mon mot de
+                                                                                               passe</a>
 </div>
