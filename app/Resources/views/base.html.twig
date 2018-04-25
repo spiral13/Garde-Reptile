@@ -21,12 +21,20 @@
                 </li>
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Demandes</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Créer votre annonce</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                    <a class="nav-link ml-3" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                 </li>
+
     {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Inscription</a>
@@ -37,6 +45,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>
                 </li>
+
     {% endif %}
             </ul>
         </div>

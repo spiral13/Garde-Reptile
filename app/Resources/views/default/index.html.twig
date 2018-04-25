@@ -4,13 +4,19 @@
 
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-    <div class="jumbotron">
-        <h1 class="display-3">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <style>
+        #jumb{
+            font-weight: 900;
+            background-image: url("https://images.unsplash.com/photo-1523484362566-d2583a17bbb6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=b45bc01350dca480fadc27185e293d44");  }
+        #slo{
+            font-size: 2em;}
+    </style>
+    <div id="jumb" class="p-5 m-0">
+        <h2 class="display-4 text-white">Bonjour : {{ app.user.username }}</h2>
+        <p class="ml-1 text-white" id="slo">  Cherchez, discutez, c'est réglé !</p>
+        <hr class="my-4 bg bg-light">
+        <p class="lead text-white">
+            <a class="btn btn-info btn-lg" href="#" role="button">Créer votre annonce</a>
         </p>
     </div>
 
@@ -28,7 +34,7 @@
         <p class="ml-1 text-white" id="slo">  Le site qui chouchoute vos reptiles quand vous vous absentez</p>
         <hr class="my-4 bg bg-light">
         <p class="lead text-white">
-            Pour profiter de tous les services : <a class="btn btn-info btn-lg" href="#" role="button">Inscrivez-vous</a>
+            Pour profiter de tous les services : <a class="btn btn-info btn-lg" href="{{ path('fos_user_registration_register') }}" role="button">Inscrivez-vous</a>
         </p>
     </div>
 
