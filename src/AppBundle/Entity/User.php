@@ -44,13 +44,16 @@ class User extends BaseUser
     protected $description;
 
 
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+ 
     }
 
-    /**
+
+     /**
      * @return mixed
      */
     public function getDescription()
