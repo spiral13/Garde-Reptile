@@ -23,10 +23,10 @@
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Offres</a>
+                    <a class="nav-link" href="{{ path('ad_offer') }}">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Demandes</a>
+                    <a class="nav-link" href="{{ path('ad_request') }}">Demandes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Créer votre annonce</a>
