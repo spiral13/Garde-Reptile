@@ -31,7 +31,7 @@ class AdController extends Controller
      */
     public function ListOfferAction()
     {
-        return new Response('Page Liste Annonces Offres');
+        return $this->render('templates/offer.html.twig');
 
     }
 
@@ -40,7 +40,7 @@ class AdController extends Controller
      */
     public function ListRequestAction()
     {
-        return new Response('Page Liste Annonces Demande');
+        return $this->render('templates/request.html.twig');
 
     }
 
