@@ -72,7 +72,15 @@
 
         <div id="root"></div>
 
-        {% block javascripts %}{% endblock %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="fixed-bottom">
+            <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Interface Admin</a>
+        </div>
+    {% endif %}
+
+
+    {% block javascripts %}{% endblock %}
 		<script src="rAssets/js/app.js"></script>
 		<script>require('src/index');</script>
     </body>
