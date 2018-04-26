@@ -59,13 +59,17 @@ class AdController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid() ) {
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($ad);
             $em->flush();
 
-            return new Response("Annonce publiée.");
+            $this->addFlash(
+                'notice',
+                'Annonce publiée!');
+
+            return $this->redirectToRoute('homepage');
         }
 
         $formview = $form->createView();

@@ -68,6 +68,14 @@
         {#{% endif %}#}
     {#</div>#}
 
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice m-5 p-2 border border-success rounded bg-success text-white">
+            {{ message }}
+        </div>
+    {% endfor %}
+    
+
         {% block body %}{% endblock %}
 
         <div id="root"></div>
