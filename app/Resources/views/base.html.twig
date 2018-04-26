@@ -10,8 +10,6 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-    <p>TEST BASE</p>
-	<div id="root"></div>
 
 
     {#<div>#}
@@ -25,9 +23,11 @@
         {#{% endif %}#}
     {#</div>#}
 
+	<div id="root"></div>
 
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+    <script src="rAssets/socket.io/socket.io.js"></script>
 		<script src="rAssets/js/app.js"></script>
 		<script>require('src/index');</script>
     </body>

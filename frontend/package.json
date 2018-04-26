@@ -8,6 +8,8 @@
   "scripts": {
     "build": "brunch build",
     "start": "brunch watch --server",
+    "start:node": "node server/index.js",
+    "start:brunch": "brunch watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "mocha tests/.setup.js tests/**/*.test.js",
@@ -42,10 +44,16 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "classnames": "*",
+    "express": "*",
+    "formatizer": "^1.2.4",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.12.3",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "socket.io": "*"
   }
 }
