@@ -59,6 +59,15 @@ class AdController extends Controller
 
         $form->handleRequest($request);
 
+        if ($form->isSubmitted()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ad);
+            $em->flush();
+
+            return new Response("Annonce publiée.");
+        }
+
         $formview = $form->createView();
 
         return $this->render('templates/createAd.html.twig', array(
