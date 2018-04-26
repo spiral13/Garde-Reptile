@@ -1,8 +1,31 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+
+<h3 class="mt-5 ml-5 pl-3">Modifiez votre profil</h3>
+
+<div class="container p-4 border rounded">
+
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
+
+    {#{{ form_widget(form) }}#}
+
+    <div class="form-group">{{ form_row(form.username, {'attr': {'class':'form-control'}}) }}</div>
+
+    <div class="form-group">{{ form_row(form.email, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="form-group">{{ form_row(form.ville, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="form-group">{{ form_row(form.description, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="form-group">{{ form_row(form.current_password, {'attr': {'class':'form-control'}})  }}</div>
+
+    <br>
+
     <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+        <input class="btn btn-primary btn-sm mb-4" type="submit" value="{{ 'profile.edit.submit'|trans }}" />
     </div>
 {{ form_end(form) }}
+
+    <a class="btn btn-primary btn-sm" href="{{ path('fos_user_change_password') }}" role="button">Modifier mon mot de
+                                                                                               passe</a>
+</div>
