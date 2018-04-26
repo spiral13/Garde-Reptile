@@ -68,19 +68,19 @@
         {#{% endif %}#}
     {#</div>#}
 
-
+{# Ajout d'un message Annonce publiée  #}
     {% for message in app.flashes('notice') %}
         <div class="flash-notice m-5 p-2 border border-success rounded bg-success text-white">
             {{ message }}
         </div>
     {% endfor %}
-    
+
 
         {% block body %}{% endblock %}
 
         <div id="root"></div>
 
-
+{# Ajout bouton Interface admin en bas de site si admin #}
     {% if is_granted('ROLE_ADMIN') %}
         <div class="fixed-bottom">
             <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Interface Admin</a>
