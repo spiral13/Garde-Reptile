@@ -6,13 +6,14 @@
         {% block stylesheets %}{% endblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="rAssets/css/app.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/minty/bootstrap.min.css">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
 
     {# NAV BAR #}
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="nav">
         <a class="navbar-brand mr-5" href="{{ path('homepage') }}">REPTIGARDE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,18 +62,6 @@
      </nav>
     {# END NAVBAR #}
 
-
-
-    {#<div>#}
-        {#{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}#}
-            {#{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |#}
-            {#<a href="{{ path('fos_user_security_logout') }}">#}
-                {#{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}#}
-            {#</a>#}
-        {#{% else %}#}
-            {#<a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>#}
-        {#{% endif %}#}
-    {#</div>#}
 
 {# Ajout d'un message Annonce publiée  #}
     {% for message in app.flashes('notice') %}

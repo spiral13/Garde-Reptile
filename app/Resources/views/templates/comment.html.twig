@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container form-group m-5">
+    {{ form_start(formCom) }}
+        <div class="form-group col-4 ">{{ form_row(formCom.comment, {'attr': {'class':'form-control'}})  }} </div>
+    {{ form_end(formCom) }}
+    </div>
+{% endblock %}
