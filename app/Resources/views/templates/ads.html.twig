@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h3>Page Liste Annonces</h3>
+
+    {% for ad in ads %}
+        <div class="border rounded p-3 m-4">
+            <a href="{{  path('ad_id', {'id': ad.id}) }}">
+                <h3 class="text-info font-weight-bold mb-4 text-uppercase">{{ad.title}}</h3>
+            </a>
+            <p class="text-white">{{ad.content}}</p>
+            <p class="text-warning font-italic">{{ad.ville}}</p>
+            {#<p>{{question.date}}</p>#}
+            <p class="badge badge-info mt-3">{{ad.service}}</p>
+        </div>
+        {#{{ dump(ad.id) }}#}
+    {% endfor %}
+
+{% endblock %}

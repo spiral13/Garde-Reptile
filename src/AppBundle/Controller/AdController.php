@@ -20,11 +20,33 @@ class AdController extends Controller
 {
 
     /**
-     * @Route("/ad", name="ad")
+     * @Route("/ads", name="ads")
      */
-    public function IndexAction()
+    public function showAllAdAction()
     {
-        return new Response('Page Annonces');
+        $ads = $this->getDoctrine()
+            ->getRepository('AppBundle:Ad')
+            ->findBy([], ['date' => 'DESC']);
+        return $this->render('templates/ads.html.twig', array(
+            'ads' => $ads,
+        ));
+
+    }
+
+    /**
+     * @Route("/ad/{id}", name="ad_id", requirements={"id"="\d+"})
+     */
+    public function showAd($id)
+    {
+        $ad = $this->getDoctrine()
+            ->getRepository('AppBundle:Ad')
+            ->find($id);
+        if (!$ad) {
+            throw $this->createNotFoundException(' Annonce non trouvée. ');
+        }
+        return $this->render('templates/addetail.html.twig', array(
+            'ad' => $ad,
+        ));
 
     }
 
