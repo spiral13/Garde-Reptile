@@ -14,7 +14,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Common\Collections\ArrayCollection;
 use AppBundle\Entity\Ad;
+use AppBundle\Entity\User;
 
 class AdController extends Controller
 {
@@ -76,7 +78,6 @@ class AdController extends Controller
     public function CreateAction(Request $request)
     {
         $ad = new Ad();
-
         $form = $this->createForm(AdType::class, $ad);
 
         $form->handleRequest($request);

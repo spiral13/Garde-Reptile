@@ -9,9 +9,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use FOS\UserBundle\Model\User as BaseUser;
+use FOS\AppBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use AppBundle\Entity\User;
+
 
 /**
  * @ORM\Entity
@@ -56,16 +58,27 @@ class Ad
      */
     private $date;
 
+//    /**
+//     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ads")
+//     * @ORM\JoinTable(name="fos_user",
+//     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+//     *      inverseJoinColumns={@ORM\JoinColumn(name="ad_id", referencedColumnName="id")}
+//     * )
+//     */
+//    protected $user;
+
     /**
-     * @ORM/ManyToOne(targetEntity="UserBundle\Entity\User", inversedBy="ads", cascade={"persist"})
+     *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ad")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
+
 
 
     public function __construct()
     {
         $this->date = new \Datetime();
-        $this->user = new ArrayCollection();
+//        $this->user = new ArrayCollection();
     }
 
     /**

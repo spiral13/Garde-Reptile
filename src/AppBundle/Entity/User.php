@@ -12,6 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use AppBundle\Entity\Ad;
 
 /**
  * @ORM\Entity
@@ -19,6 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User extends BaseUser
 {
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -45,20 +47,20 @@ class User extends BaseUser
     protected $description;
 
     /**
-     * @ORM/OneToMany(targetEntity="Ad", mappedBy="user")
-     * @JoinTable(name="ad")
+     * @ORM\OneToMany(targetEntity="Ad", mappedBy="user")
      */
-    protected $ads;
+    private $ads;
+
 
     public function __construct()
     {
         parent::__construct();
         $this->ads = new ArrayCollection();
- 
+
     }
 
 
-     /**
+    /**
      * @return mixed
      */
     public function getDescription()
@@ -108,12 +110,10 @@ class User extends BaseUser
 
     /**
      * @param mixed $ads
-     * @return User
      */
     public function setAds($ads)
     {
         $this->ads = $ads;
-        return $this;
     }
 
 
