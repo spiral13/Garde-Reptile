@@ -58,17 +58,9 @@ class Ad
      */
     private $date;
 
-//    /**
-//     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ads")
-//     * @ORM\JoinTable(name="fos_user",
-//     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-//     *      inverseJoinColumns={@ORM\JoinColumn(name="ad_id", referencedColumnName="id")}
-//     * )
-//     */
-//    protected $user;
 
     /**
-     *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ad")
+     *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ads")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;

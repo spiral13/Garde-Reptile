@@ -78,6 +78,8 @@ class AdController extends Controller
     public function CreateAction(Request $request)
     {
         $ad = new Ad();
+        $user = $this->getUser();
+        $ad->setUser($user);
         $form = $this->createForm(AdType::class, $ad);
 
         $form->handleRequest($request);
@@ -86,6 +88,7 @@ class AdController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($ad);
+            $em->persist($user);
             $em->flush();
 
             $this->addFlash(
