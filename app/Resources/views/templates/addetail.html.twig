@@ -5,7 +5,8 @@
 <div class="container border mt-5 ">
 
     <h3>Titre = {{ ad.title }}</h3>
-    <p>Créer par :<a href="{{ path('fos_user_profile_show', {'id': ad.user.id }) }}">{{ ad.user.username }}</a> </p>
+    <p>Créer par :<a href="{{ path('fos_user_profile_show', {'id': ad.user.id }) }}">{{ ad.user.username
+            }}</a> </p>
     <p>Ville = {{ ad.ville }}</p>
     <p>Contenu = {{ ad.content }}</p>
     <p>Service = {{ ad.service}}</p>
@@ -15,9 +16,9 @@
     <h4 class="ml-5 mt-3"> Vos commentaires :</h4>
 
     {#{{ dump(formCom) }}#}
-    {#<div>#}
-        {#{{ form_start(formCom) }}#}
-        {#{{ form_widget(formCom) }}#}
-        {#{{ form_end(formCom) }}#}
-    {#</div>#}
+    {#<div>
+        {{ form_start(formCom) }}
+        {{ form_widget(formCom) }}
+        {{ form_end(formCom) }}
+    </div>#}
 {% endblock %}

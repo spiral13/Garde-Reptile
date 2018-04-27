@@ -53,25 +53,6 @@ class AdController extends Controller
     }
 
     /**
-     * @Route("/ad/offer", name="ad_offer")
-     */
-    public function ListOfferAction()
-    {
-        return $this->render('templates/offer.html.twig');
-
-    }
-
-    /**
-     * @Route("/ad/request", name="ad_request")
-     */
-    public function ListRequestAction()
-    {
-        return $this->render('templates/request.html.twig');
-
-    }
-
-
-    /**
      * @Route("/ad/create", name="ad_create")
      *
      */
@@ -108,7 +89,7 @@ class AdController extends Controller
     /**
      * @Route("/ad/offer", name="ad_offer")
      */
-    public function offerAction()
+    public function ListOfferAction()
     {
         $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Offre');
 
@@ -120,7 +101,7 @@ class AdController extends Controller
     /**
      * @Route("/ad/request", name="ad_request")
      */
-    public function requestAction()
+    public function ListRequestAction()
     {
         $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande');
 
