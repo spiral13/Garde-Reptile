@@ -44,6 +44,7 @@
             </a>
         </div>
             <p class="text-info">{{ad.content}}</p>
+            <a href=""><p>Créer par :{{ ad.user.username}} </p></a>
             <p class="text-warning font-italic">{{ad.ville}}</p>
             {#<p>{{question.date}}</p>#}
             <p class="badge badge-info mt-3">{{ad.service}}</p>
@@ -59,6 +60,7 @@
                     <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
                 </a>
                 <p class="text-info">{{ad.content}}</p>
+                <p>Créer par :{{ ad.user.username}} </p>
                 <p class="text-warning font-italic">{{ad.ville}}</p>
                 {#<p>{{question.date}}</p>#}
                 <p class="badge badge-info mt-3">{{ad.service}}</p>

@@ -14,12 +14,12 @@
             <img src="https://images.unsplash.com/photo-1518321544536-00087d6ccea1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=59aad79163e6ce95775c3326f7693ec8"
                  width="80" height="80">
             </div>
-            <p>Créer par : {{ ad.user.username }}</p>
+            <p>Créer par :{{ ad.user.username}} </p>
             <p class="text-warning font-italic" id="ville">Ville : {{ad.ville}}</p>
             <p class="">{{ad.content}}</p>
             <p class="badge badge-danger mt-3">{{ad.service}}</p>
         </div>
-        {#{{ dump(ad.id) }}#}
+
     {% endfor %}
 
 
