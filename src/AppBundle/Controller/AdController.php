@@ -28,7 +28,7 @@ class AdController extends Controller
     {
         $ads = $this->getDoctrine()
             ->getRepository('AppBundle:Ad')
-            ->findBy([], ['date' => 'DESC']);
+            ->findBy([], array('date' => 'DESC'));
         return $this->render('templates/ads.html.twig', array(
             'ads' => $ads,
         ));
