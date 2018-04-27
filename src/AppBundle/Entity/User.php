@@ -8,6 +8,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -43,12 +44,16 @@ class User extends BaseUser
      */
     protected $description;
 
-
+    /**
+     * @ORM/OneToMany(targetEntity="Ad", mappedBy="user")
+     * @JoinTable(name="ad")
+     */
+    protected $ads;
 
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->ads = new ArrayCollection();
  
     }
 
@@ -91,6 +96,24 @@ class User extends BaseUser
     public function setVille($ville)
     {
         $this->ville = $ville;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAds()
+    {
+        return $this->ads;
+    }
+
+    /**
+     * @param mixed $ads
+     * @return User
+     */
+    public function setAds($ads)
+    {
+        $this->ads = $ads;
+        return $this;
     }
 
 
