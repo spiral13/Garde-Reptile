@@ -105,4 +105,29 @@ class AdController extends Controller
 
     }
 
+    /**
+     * @Route("/ad/offer", name="ad_offer")
+     */
+    public function offerAction()
+    {
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Offre');
+
+        return $this->render('templates/offer.html.twig', [
+            'ads' => $ads,
+        ]);
+    }
+
+    /**
+     * @Route("/ad/request", name="ad_request")
+     */
+    public function requestAction()
+    {
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande');
+
+        return $this->render('templates/request.html.twig', [
+            'ads' => $ads,
+        ]);
+
+    }
+
 }
