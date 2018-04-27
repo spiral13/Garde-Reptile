@@ -1,0 +1,75 @@
+
+/* STYLE of navbar*/
+#nav{
+    box-shadow: -3px 10px 33px -6px rgba(0,0,0,0.75);
+
+}
+
+#jumb
+{
+     box-shadow: -6px 7px 10px -6px;
+     font-weight: 900;
+     background-image: url("https://images.unsplash.com/photo-1523484362566-d2583a17bbb6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=b45bc01350dca480fadc27185e293d44");
+}
+
+ #jumb1{
+     box-shadow: -6px 7px 10px -6px;
+     font-weight: 900;
+     background-image: url("https://images.unsplash.com/photo-1475851624515-90a9a335785d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=2c5b6f2fc0c47b065426fd9931e80343");
+ }
+
+
+#slo {
+    font-size: 2em;
+}
+
+
+/* Style of last Ad in HomePage*/
+#lastAd{
+    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    /*border-radius: 10px;*/
+}
+
+#adTitle{
+    text-align: center;
+    /*background-color: #d6fffa;*/
+    font-weight: bold;
+    padding: 1em;
+    color: #95d6c3;
+}
+
+/* Style of Ad in Ads List Page*/
+#listAd{
+    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    /* border-radius: 10px; */
+    margin-top: 2em;
+    margin-bottom: 3em;
+    padding: 1em;
+    /*background-color: rgb(202, 213, 217);*/
+}
+
+#adsTitle{
+
+    /*background-color: white;*/
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+
+#headads{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headads img{
+    border-radius: 3em;
+}
+
+#ville{
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+
+/* My PROFIL /   CA MARCHE PO LE CSS SUR CETTE FOUTUE PAGE  */
+
+#myprofil{
+    background-color: blanchedalmond;
+}
