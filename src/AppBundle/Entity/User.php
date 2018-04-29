@@ -51,11 +51,12 @@ class User extends BaseUser
      */
     private $ads;
 
-// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     /**
      * @ORM\OneToMany(targetEntity="Comments", mappedBy="user")
      */
     private $comments;
+
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __construct()

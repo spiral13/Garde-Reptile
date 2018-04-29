@@ -42,7 +42,7 @@ class CommentsController extends Controller
 
 //            $this->addFlash(
 //                'notice',
-//                'Annonce publiée!');
+//                'Commentaire publié. ');
 
             return $this->redirectToRoute('homepage');
         }
