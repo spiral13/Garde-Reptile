@@ -28,6 +28,7 @@ class Comments
      */
     private $comment;
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     /**
      *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="comments")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
@@ -35,9 +36,11 @@ class Comments
     private $user;
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
-
+    public function __toString()
+    {
+        return $this->getComment();
+    }
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
-
     /**
      * Get id
      *

@@ -8,12 +8,7 @@
 
 namespace AppBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use FOS\AppBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use AppBundle\Entity\User;
-use AppBundle\Entity\Comments;
 
 
 /**
@@ -67,7 +62,10 @@ class Ad
     private $user;
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
-
+    public function __toString()
+    {
+        return $this->getContent();
+    }
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
 
     public function __construct()

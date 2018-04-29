@@ -45,7 +45,7 @@ class User extends BaseUser
      * @ORM\Column(type="text", nullable=true)
      */
     protected $description;
-
+// Les relations avec ads et comments posent problème pour EasyAdmin, il faudra voir comment régler ça
     /**
      * @ORM\OneToMany(targetEntity="Ad", mappedBy="user")
      */
