@@ -16,7 +16,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\Common\Collections\ArrayCollection;
 use AppBundle\Entity\Ad;
-use AppBundle\Entity\User;
+use AppBundle\Entity\Comments;
+use AppBundle\Form\CommentsType;
 
 class AdController extends Controller
 {

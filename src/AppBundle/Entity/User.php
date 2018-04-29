@@ -51,7 +51,13 @@ class User extends BaseUser
      */
     private $ads;
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+    /**
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="user")
+     */
+    private $comments;
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __construct()
     {
         parent::__construct();
@@ -115,6 +121,26 @@ class User extends BaseUser
     {
         $this->ads = $ads;
     }
+//    - - - - - - - - - - - - - - - - -
+    /**
+     * @return mixed
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param mixed $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
+//    - - - - - - - - - - - - - - - - -
+
+
 
 
 }

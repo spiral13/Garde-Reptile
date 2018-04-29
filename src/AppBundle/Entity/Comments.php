@@ -28,6 +28,14 @@ class Comments
      */
     private $comment;
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+    /**
+     *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="comments")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
 
     /**
      * Get id
@@ -62,5 +70,23 @@ class Comments
     {
         return $this->comment;
     }
+
+//    - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+
 }
 

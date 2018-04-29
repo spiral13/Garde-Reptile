@@ -13,6 +13,7 @@ use FOS\AppBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use AppBundle\Entity\User;
+use AppBundle\Entity\Comments;
 
 
 /**
@@ -64,7 +65,6 @@ class Ad
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
-
 
 
     public function __construct()
@@ -195,8 +195,5 @@ class Ad
         $this->user = $user;
         return $this;
     }
-
-
-
 
 }

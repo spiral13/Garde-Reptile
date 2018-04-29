@@ -14,40 +14,44 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use AppBundle\Entity\Comments;
+use AppBundle\Entity\Ad;
 
 class CommentsController extends Controller
 {
-//    - - - - - - - - - - - -
     /**
-     * @Route("/ad/comment", name="ad_comment")
+     * @Route("/ad/{id}/comment", name="ad_comment")
      *
      */
     public function CommentAction(Request $request)
     {
         $comment = new Comments();
 
-        $formCom = $this->createForm(CommentsType::class, $comment);
+        $user = $this->getUser();
+        $comment->setUser($user);
 
-        $formCom->handleRequest($request);
+        $form = $this->createForm(CommentsType::class, $comment);
 
-        if ($formCom->isSubmitted() && $formCom->isValid() ) {
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid() ) {
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($comment);
+            $em->persist($user);
             $em->flush();
 
 //            $this->addFlash(
 //                'notice',
 //                'Annonce publiée!');
 
-            return $this->redirectToRoute('ad_id');
+            return $this->redirectToRoute('homepage');
         }
 
-        $formview = $formCom->createView();
+        $formview = $form->createView();
 
         return $this->render('templates/comment.html.twig', array(
-            'formCom'=>$formview));
-        dump($formCom);
+            'form'=>$formview));
+
 
     }
 }
