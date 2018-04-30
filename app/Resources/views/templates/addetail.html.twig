@@ -6,8 +6,8 @@
 
     <h3>{{ ad.title }}</h3>
 
-    <p><a href="{{ path('fos_user_profile_show', {'id': ad.user.id }) }}">Publiée par : {{ ad.user.username}} <span
-                    class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
+    <p><a href="{{ path('profile_id', {'id': ad.user.id }) }}">Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
+
 
     <p>Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
@@ -25,8 +25,8 @@
             </div>
         {% endfor %}
 
-    {#{{ dump(ad) }}#}
     {#{{ dump(app.user) }}#}
+    {#{{ dump(ad.user) }}#}
 
 
 {% endblock %}
