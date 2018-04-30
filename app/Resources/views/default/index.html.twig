@@ -2,34 +2,19 @@
 
 {% block body %}
 
+{# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-    <style>
-        #jumb{
-            font-weight: 900;
-            background-image: url("https://images.unsplash.com/photo-1523484362566-d2583a17bbb6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=b45bc01350dca480fadc27185e293d44");  }
-        #slo{
-            font-size: 2em;}
-    </style>
     <div id="jumb" class="p-5 m-0">
         <h2 class="display-4 text-white">Bonjour {{ app.user.username }}</h2>
         <p class="ml-1 text-white" id="slo">  Cherchez, discutez, c'est réglé !</p>
         <hr class="my-4 bg bg-light">
         <p class="lead text-white">
-            <a class="btn btn-info btn-lg" href="#" role="button">Créer votre annonce</a>
+            <a class="btn btn-info btn-lg" href="{{ path('ad_create') }}" role="button">Créer votre annonce</a>
         </p>
     </div>
-
 {% else %}
-
-    <style>
-        #jumb{
-            font-weight: 900;
-            background-image: url("https://images.unsplash.com/photo-1475851624515-90a9a335785d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=2c5b6f2fc0c47b065426fd9931e80343");  }
-        #slo{
-            font-size: 2em;}
-    </style>
-    <div id="jumb" class="p-5 m-0">
+    <div id="jumb1" class="p-5 m-0">
         <h2 class="display-4 text-white">Bienvenue sur ReptiGarde</h2>
         <p class="ml-1 text-white" id="slo">  Le site qui chouchoute vos reptiles quand vous vous absentez</p>
         <hr class="my-4 bg bg-light">
@@ -37,7 +22,53 @@
             Pour profiter de tous les services : <a class="btn btn-info btn-lg" href="{{ path('fos_user_registration_register') }}" role="button">Inscrivez-vous</a>
         </p>
     </div>
-
 {% endif %}
+{# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
+
+
+
+{# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
+    {# AFFICHAGE DES 4 DERNIERES ANNONCES PUBLIEES #}
+    <h4 class="ml-5 mt-5"> Les 4 dernières annonces : </h4>
+    <hr>
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <div class="container d-flex flex-row justify-content-around flex-wrap"">
+    {% for ad in ads %}
+
+        <div class="p-3 m-4 col-lg-5 "  id="lastAd" >
+        <div id="headads">
+            <img src="https://images.unsplash.com/photo-1518321544536-00087d6ccea1?ixlib=rb-0.3.5&q=90&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=59aad79163e6ce95775c3326f7693ec8"
+                 width="90" height="90">
+            <a href="{{  path('ad_id', {'id': ad.id}) }}">
+                <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
+            </a>
+        </div>
+            <p class="text-primary">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span> </p>
+            <p class="text-info">{{ad.content}}</p>
+            <p class="text-warning font-italic">{{ad.ville}}</p>
+            {#<p>{{question.date}}</p>#}
+            <p class="badge badge-info mt-3">{{ad.service}}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% else %}
+    <div class="container d-flex flex-row justify-content-around flex-wrap">
+        {% for ad in ads %}
+
+            <div class=" p-3 m-4  col-5 "  id="lastAd" >
+                <a href="{{ path('fos_user_security_login') }}">
+                    <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
+                </a>
+                <p class="text-primary">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
+                <p class="text-info">{{ad.content}}</p>
+                <p class="text-warning font-italic">{{ad.ville}}</p>
+                {#<p>{{question.date}}</p>#}
+                <p class="badge badge-info mt-3">{{ad.service}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+{# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
+
 
 {% endblock %}

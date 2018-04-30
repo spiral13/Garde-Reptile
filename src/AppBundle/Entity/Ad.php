@@ -8,9 +8,8 @@
 
 namespace AppBundle\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity
@@ -35,7 +34,6 @@ class Ad
      */
     private $ville;
 
-
     /**
      * @ORM\Column(name="service", type="string")
      */
@@ -57,9 +55,23 @@ class Ad
     private $date;
 
 
+    /**
+     *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ads")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+    public function __toString()
+    {
+        return $this->getContent();
+    }
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+
     public function __construct()
     {
         $this->date = new \Datetime();
+//        $this->user = new ArrayCollection();
     }
 
     /**
@@ -167,7 +179,22 @@ class Ad
         $this->date = $date;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 
-
+    /**
+     * @param mixed $user
+     * @return Ad
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+        return $this;
+    }
 
 }

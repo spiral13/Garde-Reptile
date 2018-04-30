@@ -8,9 +8,11 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use AppBundle\Entity\Ad;
 
 /**
  * @ORM\Entity
@@ -18,6 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User extends BaseUser
 {
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -42,18 +45,29 @@ class User extends BaseUser
      * @ORM\Column(type="text", nullable=true)
      */
     protected $description;
+// Les relations avec ads et comments posent problème pour EasyAdmin, il faudra voir comment régler ça
+    /**
+     * @ORM\OneToMany(targetEntity="Ad", mappedBy="user")
+     */
+    private $ads;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="user")
+     */
+    private $comments;
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
 
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __construct()
     {
         parent::__construct();
-        // your own logic
- 
+        $this->ads = new ArrayCollection();
+
     }
 
 
-     /**
+    /**
      * @return mixed
      */
     public function getDescription()
@@ -92,6 +106,42 @@ class User extends BaseUser
     {
         $this->ville = $ville;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAds()
+    {
+        return $this->ads;
+    }
+
+    /**
+     * @param mixed $ads
+     */
+    public function setAds($ads)
+    {
+        $this->ads = $ads;
+    }
+//    - - - - - - - - - - - - - - - - -
+    /**
+     * @return mixed
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param mixed $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
+//    - - - - - - - - - - - - - - - - -
+
+
 
 
 }

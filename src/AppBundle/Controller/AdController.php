@@ -14,7 +14,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\Common\Collections\ArrayCollection;
 use AppBundle\Entity\Ad;
+use AppBundle\Entity\Comments;
+use AppBundle\Form\CommentsType;
 
 class AdController extends Controller
 {
@@ -26,7 +29,7 @@ class AdController extends Controller
     {
         $ads = $this->getDoctrine()
             ->getRepository('AppBundle:Ad')
-            ->findBy([], ['date' => 'DESC']);
+            ->findBy([], array('date' => 'DESC'));
         return $this->render('templates/ads.html.twig', array(
             'ads' => $ads,
         ));
@@ -51,32 +54,14 @@ class AdController extends Controller
     }
 
     /**
-     * @Route("/ad/offer", name="ad_offer")
-     */
-    public function ListOfferAction()
-    {
-        return $this->render('templates/offer.html.twig');
-
-    }
-
-    /**
-     * @Route("/ad/request", name="ad_request")
-     */
-    public function ListRequestAction()
-    {
-        return $this->render('templates/request.html.twig');
-
-    }
-
-
-    /**
      * @Route("/ad/create", name="ad_create")
      *
      */
     public function CreateAction(Request $request)
     {
         $ad = new Ad();
-
+        $user = $this->getUser();
+        $ad->setUser($user);
         $form = $this->createForm(AdType::class, $ad);
 
         $form->handleRequest($request);
@@ -85,6 +70,7 @@ class AdController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($ad);
+            $em->persist($user);
             $em->flush();
 
             $this->addFlash(
@@ -101,6 +87,29 @@ class AdController extends Controller
 
     }
 
+    /**
+     * @Route("/ad/offer", name="ad_offer")
+     */
+    public function ListOfferAction()
+    {
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Offre');
 
+        return $this->render('templates/offer.html.twig', [
+            'ads' => $ads,
+        ]);
+    }
+
+    /**
+     * @Route("/ad/request", name="ad_request")
+     */
+    public function ListRequestAction()
+    {
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande');
+
+        return $this->render('templates/request.html.twig', [
+            'ads' => $ads,
+        ]);
+
+    }
 
 }
