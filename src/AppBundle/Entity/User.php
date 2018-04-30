@@ -63,7 +63,11 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->ads = new ArrayCollection();
+    }
 
+    public function __toString()
+    {
+        $this->getComments();
     }
 
 

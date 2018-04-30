@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use AppBundle\Entity\Ad;
 
 /**
  * Comments
@@ -34,6 +36,12 @@ class Comments
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ad", inversedBy="comments")
+     * @ORM\JoinColumn(name="ad_id", referencedColumnName="id")
+     */
+    private $ad;
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __toString()
@@ -90,6 +98,24 @@ class Comments
     public function setUser($user)
     {
         $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAd()
+    {
+        return $this->ad;
+    }
+
+    /**
+     * @param mixed $ad
+     * @return Comments
+     */
+    public function setAd($ad)
+    {
+        $this->ad = $ad;
+        return $this;
     }
 
 }

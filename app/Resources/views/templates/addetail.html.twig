@@ -6,7 +6,8 @@
 
     <h3>{{ ad.title }}</h3>
 
-    <p><a href="{{ path('fos_user_profile_show', {'id': ad.user.username }) }}">Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
+    <p><a href="{{ path('fos_user_profile_show', {'id': ad.user.id }) }}">Publiée par : {{ ad.user.username}} <span
+                    class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
 
     <p>Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
@@ -18,6 +19,11 @@
     <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class="mt-5 mb-3 mr-3 btn btn-info float-right">Laisser un commentaire</button></a>
     <hr class="mt-4">
     <h4 class="ml-5 mt-3"> Vos commentaires :</h4>
+        {% for comment in ad.comments %}
+            <div>
+                Commentaire de {{ comment.user.username }} : {{ comment.comment }}
+            </div>
+        {% endfor %}
 
     {#{{ dump(ad) }}#}
     {#{{ dump(app.user) }}#}
