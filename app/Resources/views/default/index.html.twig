@@ -59,16 +59,16 @@
                 <a href="{{ path('fos_user_security_login') }}">
                     <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
                 </a>
-                <p class="text-primary">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
+                {#<p class="text-primary">Publiée par : {{ ad.user.id }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>#}}
                 <p class="text-info">{{ad.content}}</p>
                 <p class="text-warning font-italic">{{ad.ville}}</p>
                 {#<p>{{question.date}}</p>#}
                 <p class="badge badge-info mt-3">{{ad.service}}</p>
             </div>
-        {% endfor %}
+        {% endfor %}[
     </div>
 {% endif %}
-{# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
+{# - - - - - - - -  -] - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
 
 
 {% endblock %}
