@@ -63,50 +63,63 @@ label, button {
 input, button {
 	outline: 0;
 }
-
+#root {
+	width: 20% !important;
+	background-color: #78c2ad !important;
+	position: fixed !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	border-top: 1px solid #ccc;
+	background-color: #78c2ad !important;
+}
 #app {
-  height: 100vh;
-  color: $text-color;
+  text-align: center;
+  color: #222;
+  background-color: #78c2ad !important;
+  /* font-size: 1px !important; */
 }
 #app-title {
-  font-size: 2em;
+  font-size: 1px !important;
   padding: 1.5rem 1rem;
 }
 
 #form {
   height: 5rem;
-  position: fixed;
+  /* position: fixed;
   right: 0;
   left: 0;
-  bottom: 0;
-  border-top: 1px solid $border-color;
+  bottom: 0; */
+  background-color: #78c2ad !important;
 }
 #form-input {
-  width: 100%;
+  /* width: 100%; */
   border: 0;
   font-size: 1.2em;
-  padding: 1.5rem 1rem;
+  padding: 1em !important;
+  background-color: #78c2ad !important;
 }
 #form-input::-webkit-input-placeholder {
-  color: $placeholder-color;
+  color: #ccc;
 }
 #form-input:-ms-input-placeholder {
-  color: $placeholder-color;
+	text-align: right !important;
+  color: #ccc;
 }
 #form-input::-ms-input-placeholder {
-  color: $placeholder-color;
+  color: #ccc;
 }
 #form-input::placeholder {
-  color: $placeholder-color;
+  color: #ccc;
 }
 
 #messages {
-  border-top: 1px solid $border-color;
-  height: calc(20vh - 10em);
-  overflow-y: auto;
+  border-top: 1px solid #ccc;
+  height: 50px;
+  /* overflow-y: auto; */
+  background-color: #78c2ad !important;
 }
 #messages .message {
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
 }
 #messages .message-content {
   font-size: 1.2em;
@@ -116,18 +129,19 @@ input, button {
   font-size: 0.7em;
 }
 #messages .message--own {
-  background-color: $bg-own-message;
+  background-color: #f1f1f1;
 }
 
 #settings {
   position: absolute;
   right: 0;
   bottom: 1.5em;
-  display: flex;
+  display: none;
   align-items: center;
   -webkit-transform: translateX(15em);
           transform: translateX(15em);
-  transition: $duration;
+  transition: 0.6s;
+  background-color: #78c2ad !important;
 }
 #settings-toggle {
   margin-right: 1em;
@@ -135,7 +149,7 @@ input, button {
 #settings-toggle::before {
   -webkit-transform: rotate(0);
           transform: rotate(0);
-  transition: $duration;
+  transition: 0.6s;
   content: "+";
   display: block;
   cursor: pointer;
@@ -145,7 +159,7 @@ input, button {
 #settings-form {
   width: 15em;
   opacity: 0;
-  transition: $duration;
+  transition: 0.6s;
 }
 #settings-input {
   width: 80%;

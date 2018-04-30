@@ -16,9 +16,8 @@ import Form from 'src/containers/Form';
  */
 const App = () => (
   <div id="app">
-    <h1 id="app-title">Chatroom</h1>
+    <h1 id="app-title">Chatroom <Settings /> </h1>
     <Messages />
-    <Settings />
     <Form />
   </div>
 );

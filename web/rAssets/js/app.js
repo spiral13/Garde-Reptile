@@ -82329,7 +82329,7 @@ var App = function App() {
     { id: 'app' },
     _react2.default.createElement(
       'h1',
-      { id: 'app-title' },
+      { id: 'app-title bg-primary' },
       'Chatroom'
     ),
     _react2.default.createElement(_Messages2.default, null),
