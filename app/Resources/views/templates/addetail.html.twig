@@ -16,12 +16,13 @@
 </div>
 
 
-    <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class="mt-5 mb-3 mr-3 btn btn-info float-right">Laisser un commentaire</button></a>
+    <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class=" btn btn-info float-right col-xs-8 mb-5" id="adsComms">Laisser un commentaire</button></a>
     <hr class="mt-4">
-    <h4 class="ml-5 mt-3"> Vos commentaires :</h4>
+    <h4 class="ml-5 mt-5"> Vos commentaires :</h4>
         {% for comment in ad.comments %}
-            <div>
-                Commentaire de {{ comment.user.username }} : {{ comment.comment }}
+            <div class="container  mt-3 p-4" id="comms">
+                <p><span class="text-primary">Commentaire de {{ comment.user.username }} :</span> </p>
+                <p>{{ comment.comment }}</p>
             </div>
         {% endfor %}
 

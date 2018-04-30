@@ -26,8 +26,9 @@
 
 /* Style of last Ad in HomePage*/
 #lastAd{
-    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
-    /*border-radius: 10px;*/
+    box-shadow: 10px 10px 33px -6px darkgrey;
+    /* border-radius: 10px; */
+    background-color: whitesmoke;
 }
 
 #adTitle{
@@ -40,17 +41,14 @@
 
 /* Style of Ad in Ads List Page*/
 #listAd{
-    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
-    /* border-radius: 10px; */
+    box-shadow: 10px 10px 33px -6px darkgrey;
+    background-color: whitesmoke;
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 1em;
-    /*background-color: rgb(202, 213, 217);*/
 }
 
 #adsTitle{
-
-    /*background-color: white;*/
     padding: 0.5em 0.5em 0.5em 0em;
 }
 
@@ -86,5 +84,17 @@
 
 #addetail h3{
     font-weight: bold;
+}
 
+
+/*  STYLE OF COMMENTS IN ADS DETAILS*/
+#adsComms{
+    margin-right: 1em;
+}
+
+#comms{
+    margin-bottom: 3em;
+    box-shadow: 3px 11px 33px -6px darkgrey;
+    border-radius: 10px;
+    background-color: whitesmoke;
 }
