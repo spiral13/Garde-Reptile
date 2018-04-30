@@ -1,17 +1,20 @@
-// @require "app/styles/charte";
-//
-// #form
-//   height: 5rem
-//   position: fixed
-//   right: 0
-//   left: 0
-//   bottom: 0
-//   border-top: 1px solid $border-color
-//
-//   &-input
-//     width: 100%
-//     border: 0
-//     font-size: 1.2em
-//     padding: 1.5rem 1rem
-//     &::placeholder
-//       color: $placeholder-color
+@require "app/styles/charte";
+
+#form
+  height: 5rem
+  // position: fixed
+  // right: 0
+  // left: 0
+  // bottom: 0
+  border-top: 1px solid $border-color
+  background-color: $bg-color !important
+
+  &-input
+    background-color: $bg-color
+    width: 100%
+    border: 0
+    font-size: 1.2em
+    padding: 1.5rem 1rem
+    &::placeholder
+      color: $bg-own-message
+      background-color: $bg-color

@@ -1,46 +1,46 @@
-// @require "app/styles/charte";
-//
-// #settings
-// 	position: absolute
-// 	right: 0
-// 	bottom: 1.5em
-// 	display: flex
-// 	align-items: center
-// 	transform: translateX(15em)
-// 	transition: $duration
-//
-// 	&-toggle
-// 		margin-right: 1em
-// 		&::before
-// 			transform: rotate(0)
-// 			transition: $duration
-// 			content: "+"
-// 			display: block
-// 			cursor: pointer
-// 			font-size: 2em
-// 			font-weight: bold
-//
-// 	&-form
-// 		width: 15em
-// 		opacity: 0
-// 		transition: $duration
-//
-// 	&-input
-// 		width: 80%
-// 	&-submit
-// 		width: 20%
-// 		text-transform: uppercase
-//
-// 	&-input, &-submit
-// 		border: none
-// 		background: transparent
-// 		font-size: 1.1em
-//
-// 	&.settings--open
-// 		transform: translateX(0);
-// 	&.settings--open &
-// 		&-toggle
-// 			&::before
-// 				transform: rotate(45deg);
-// 		&-form
-// 			opacity: 1
+@require "app/styles/charte";
+
+#settings
+	position: absolute
+	right: 0
+	bottom: 1.5em
+	display: none
+	align-items: center
+	transform: translateX(15em)
+	transition: $duration
+
+	&-toggle
+		margin-right: 1em
+		&::before
+			transform: rotate(0)
+			transition: $duration
+			content: "+"
+			display: block
+			cursor: pointer
+			font-size: 2em
+			font-weight: bold
+
+	&-form
+		width: 15em
+		opacity: 0
+		transition: $duration
+
+	&-input
+		width: 80%
+	&-submit
+		width: 20%
+		text-transform: uppercase
+
+	&-input, &-submit
+		border: none
+		background: transparent
+		font-size: 1.1em
+
+	&.settings--open
+		transform: translateX(0);
+	&.settings--open &
+		&-toggle
+			&::before
+				transform: rotate(45deg);
+		&-form
+			opacity: 1

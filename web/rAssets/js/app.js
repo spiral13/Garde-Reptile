@@ -82329,11 +82329,11 @@ var App = function App() {
     { id: 'app' },
     _react2.default.createElement(
       'h1',
-      { id: 'app-title bg-primary' },
-      'Chatroom'
+      null,
+      'Messagerie'
     ),
-    _react2.default.createElement(_Messages2.default, null),
     _react2.default.createElement(_Settings2.default, null),
+    _react2.default.createElement(_Messages2.default, null),
     _react2.default.createElement(_Form2.default, null)
   );
 };
