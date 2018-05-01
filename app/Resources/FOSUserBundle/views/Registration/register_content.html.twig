@@ -14,11 +14,15 @@
     <div class="form-group text-white">{{ form_row(form.ville, {'attr': {'class':'form-control'}})  }}</div>
 
     <div class="row form-group mt-4 ml-2 text-white">{{ form_row(form.plainPassword, {'attr': {'class':'form-control'}})  }}</div>
-
-
+    
     <div>
         <input class="btn btn-primary" type="submit" id="_submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 
 {{ form_end(form) }}
+</div>
+<div class="mr-3 mt-3">
+    <a href="{{ path('fos_user_security_login') }}">
+        <button class="btn btn-primary mr-5 float-right"> Connectez-vous</button>
+    </a>
 </div>

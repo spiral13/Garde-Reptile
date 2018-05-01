@@ -6,7 +6,7 @@
 
 <h3 class="mt-5 ml-5 pl-3">Connectez-vous sur ReptiGarde</h3>
 
-<div class="container mt-2 mb-5 p-3 border rounded" id="login">
+<div class="container mt-2 mb-3 p-3 border rounded" id="login">
 <form action="{{ path("fos_user_security_check") }}" method="post">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -21,6 +21,12 @@
     <input type="checkbox"  id="remember_me" name="_remember_me" value="on" />
     <label for="remember_me" class="text-white">{{ 'security.login.remember_me'|trans }}</label>
     <br>
-    <input type="submit" class="btn btn-primary mt-2" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <input type="submit" class="btn btn-primary mt-3" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
+</div>
+
+<div class="mr-3">
+    <a href="{{ path('fos_user_registration_register') }}">
+        <button class="btn btn-primary mr-5 float-right"> Inscrivez-vous</button>
+    </a>
 </div>
