@@ -3,21 +3,21 @@
 {#{{ dump(form.plainPassword.vars) }}#}
 <h3 class="mt-5 ml-5 pl-3">Inscrivez-vous sur ReptiGarde</h3>
 
-<div class="container mt-2 p-4 border rounded">
+<div class="container mt-2 p-4 border rounded" id="register">
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
     {#{{ form_widget(form) }}#}
-    <div class="form-group">{{ form_row(form.username, {'attr': {'class':'form-control'}}) }}</div>
+    <div class="form-group text-white">{{ form_row(form.username, {'attr': {'class':'form-control'}}) }}</div>
 
-    <div class="form-group">{{ form_row(form.email, {'attr': {'class':'form-control'}})  }}</div>
+    <div class="form-group text-white">{{ form_row(form.email, {'attr': {'class':'form-control'}})  }}</div>
 
-    <div class="form-group">{{ form_row(form.ville, {'attr': {'class':'form-control'}})  }}</div>
-    <br>
-    <div class="row form-group ml-2">{{ form_row(form.plainPassword, {'attr': {'class':'form-control'}})  }}</div>
+    <div class="form-group text-white">{{ form_row(form.ville, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="row form-group mt-4 ml-2 text-white">{{ form_row(form.plainPassword, {'attr': {'class':'form-control'}})  }}</div>
 
 
     <div>
-        <input class="btn btn-primary " type="submit" value="{{ 'registration.submit'|trans }}" />
+        <input class="btn btn-primary" type="submit" id="_submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 
 {{ form_end(form) }}
