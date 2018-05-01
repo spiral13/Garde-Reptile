@@ -15,12 +15,19 @@
      background-image: url("https://images.unsplash.com/photo-1523484362566-d2583a17bbb6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=b45bc01350dca480fadc27185e293d44");
 }
 
+#jumb h2{
+    font-size: 2.5em;
+}
+
  #jumb1{
      box-shadow: -6px 7px 10px -6px;
      font-weight: 900;
      background-image: url("https://images.unsplash.com/photo-1475851624515-90a9a335785d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=2c5b6f2fc0c47b065426fd9931e80343");
  }
 
+#jumb1 h2{
+    font-size: 2.5em;
+}
 
 #slo {
     font-size: 2em;
