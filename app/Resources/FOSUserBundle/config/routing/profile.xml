@@ -8,11 +8,6 @@
         <default key="_controller">fos_user.profile.controller:showAction</default>
     </route>
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-    <route id="profile_id" path="/{id}" methods="GET">
-        <default key="_controller">fos_user.profile.controller:showIdAction</default>
-    </route>
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
     <route id="fos_user_profile_edit" path="/edit" methods="GET POST">
         <default key="_controller">fos_user.profile.controller:editAction</default>
     </route>

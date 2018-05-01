@@ -6,7 +6,7 @@
 
     <h3>{{ ad.title }}</h3>
 
-    <p><a href="{{ path('profile_id', {'id': ad.user.id }) }}">Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
+    <p>Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
 
 
     <p>Ville : {{ ad.ville }}</p>

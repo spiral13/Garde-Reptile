@@ -32,7 +32,7 @@ class AdType extends AbstractType
                     'Demande' => 'Demande',
                 )
             ))
-            ->add('content')
+            ->add('content', TextType::class)
             ->add('date', DateType::class);
     }
 
