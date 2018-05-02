@@ -30,6 +30,11 @@ class Comments
      */
     private $comment;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $publishedAt;
+
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     /**
      *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="comments")
@@ -115,6 +120,24 @@ class Comments
     public function setAd($ad)
     {
         $this->ad = $ad;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPublishedAt()
+    {
+        return $this->publishedAt;
+    }
+
+    /**
+     * @param mixed $publishedAt
+     * @return Comments
+     */
+    public function setPublishedAt($publishedAt)
+    {
+        $this->publishedAt = $publishedAt;
         return $this;
     }
 
