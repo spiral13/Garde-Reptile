@@ -23,13 +23,22 @@
         </p>
     </div>
 {% endif %}
+
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
-
-
+<div class="container" id="search">
+    <nav class="navbar navbar-light col-sm-12">
+        <form class="form-inline m-auto">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" aria-label="Search">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" aria-label="Search">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Nombre de visite" aria-label="Search">
+            <button class="btn  btn-outline-dark my-2 my-sm-0 col-sm-2" type="submit">Rechercher</button>
+        </form>
+    </nav>
+</div>
 
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
     {# AFFICHAGE DES 4 DERNIERES ANNONCES PUBLIEES #}
-    <h4 class="ml-5 mt-5"> Les 4 dernières annonces : </h4>
+    <h4 class="ml-5 mt-3"> Les 4 dernières annonces : </h4>
     <hr id="hr">
 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
     <div class="container d-flex flex-row justify-content-around flex-wrap" id="indexcont">

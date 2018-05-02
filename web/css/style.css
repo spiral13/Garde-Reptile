@@ -156,3 +156,18 @@
     border-radius: 10px;
     background-color: whitesmoke;
 }
+
+/* STYLE SEARCH BAR */
+#search{
+    position: relative;
+    bottom: 1.2em;
+}
+
+#search nav{
+    border-radius: 5px;
+    background-color: darksalmon;
+}
+
+#search button{
+    font-weight: bold;
+}
