@@ -14,8 +14,8 @@ const app = express();
 const server = Server(app);
 const io = socket(server);
 
-const indexPath = join(__dirname, '/web/rAssets/index.html');
-const assetsPath = join(__dirname, 'web/rAssets');
+const indexPath = join(__dirname, '/rAssets/index.html');
+const assetsPath = join(__dirname, 'rAssets');
 
 
 /*
