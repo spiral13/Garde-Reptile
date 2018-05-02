@@ -1,19 +1,20 @@
 
 {% trans_default_domain 'FOSUserBundle' %}
 
-
+ {#{% if app.user.id %}#}
 <h3 class="mt-5 ml-5 pl-3">Mon profil</h3>
-
+{#{% else %}#}
+    {#<h3 class="mt-5 ml-5 pl-3">profil</h3>#}
+{#{% endif %}#}
 <div class="container p-4 border " id="myprofil">
 
     <div class="fos_user_user_show">
-        <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-        <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-        <p>Ville : {{ user.ville }}</p>
-        <p>Description : {{ user.description }}</p>
+      <p> <span>{{ 'profile.show.username'|trans }}:</span>  {{ user.username }}</p>
+        <p> <span>{{ 'profile.show.email'|trans }}:</span>  {{ user.email }}</p>
+        <p> <span>Ville :</span>  {{ user.ville }}</p>
+        <p> <span>Description :</span>  {{ user.description }}</p>
     </div>
 
-    {{ dump(app.user) }}
     <a class="btn btn-primary btn-sm" href="{{ path('fos_user_profile_edit') }}" role="button">Modifier mon profil</a>
 
 </div>

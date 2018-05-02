@@ -45,7 +45,7 @@ class User extends BaseUser
      * @ORM\Column(type="text", nullable=true)
      */
     protected $description;
-// Les relations avec ads et comments posent problème pour EasyAdmin, il faudra voir comment régler ça
+
     /**
      * @ORM\OneToMany(targetEntity="Ad", mappedBy="user")
      */
@@ -63,8 +63,15 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->ads = new ArrayCollection();
-
     }
+
+//    public function __toString()
+//    {
+//        $this->getComments();
+//        $this->getVille();
+//        $this->getDescription();
+//        $this->getComment();
+//    }
 
 
     /**

@@ -3,7 +3,7 @@
 
 <h3 class="mt-5 ml-5 pl-3">Modifiez votre profil</h3>
 
-<div class="container p-4 border rounded">
+<div class="container p-4 border rounded" id="editProfil">
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
 
@@ -17,7 +17,7 @@
 
     <div class="form-group">{{ form_row(form.description, {'attr': {'class':'form-control'}})  }}</div>
 
-    <div class="form-group">{{ form_row(form.current_password, {'attr': {'class':'form-control'}})  }}</div>
+    <div class="form-group">{{ form_row(form.current_password, {'attr': {'class':'form-control col-5'}})  }}</div>
 
     <br>
 

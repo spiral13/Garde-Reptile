@@ -6,7 +6,8 @@
 
     <h3>{{ ad.title }}</h3>
 
-    <p><a href="{{ path('fos_user_profile_show', {'id': ad.user.username }) }}">Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></a> </p>
+    <p>Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
+
 
     <p>Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
@@ -15,12 +16,18 @@
 </div>
 
 
-    <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class="mt-5 mb-3 mr-3 btn btn-info float-right">Laisser un commentaire</button></a>
-    <hr class="mt-4">
-    <h4 class="ml-5 mt-3"> Vos commentaires :</h4>
+    <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class=" btn btn-info float-right col-xs-8 mb-5" id="adsComms">Laisser un commentaire</button></a>
+    <hr class="mt-4" id="hr">
+    <h4 class="ml-5 mt-5"> Vos commentaires :</h4>
+        {% for comment in ad.comments %}
+            <div class="container  mt-3 p-4" id="comms">
+                <p><span class="text-primary">Commentaire de {{ comment.user.username }} :</span> </p>
+                <p>{{ comment.comment }}</p>
+            </div>
+        {% endfor %}
 
-    {#{{ dump(ad) }}#}
     {#{{ dump(app.user) }}#}
+    {#{{ dump(ad.user) }}#}
 
 
 {% endblock %}

@@ -8,6 +8,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 
@@ -54,12 +55,16 @@ class Ad
      */
     private $date;
 
-
     /**
      *  @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="ads")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="ad")
+     */
+    private $comments;
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __toString()
@@ -71,7 +76,7 @@ class Ad
     public function __construct()
     {
         $this->date = new \Datetime();
-//        $this->user = new ArrayCollection();
+        $this->comments = new ArrayCollection();
     }
 
     /**
@@ -194,6 +199,24 @@ class Ad
     public function setUser($user)
     {
         $this->user = $user;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param mixed $comments
+     * @return Ad
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
         return $this;
     }
 
