@@ -125,6 +125,29 @@
     background-color: gainsboro;
 }
 
+/* CHANGE-PASSWORD*/
+#fos_user_change_password_form{
+    background-color: gainsboro;
+}
+
+#fos_user_change_password_form_current_password{
+    margin-left: 11em;
+    border-radius: 5px;
+    border: none;
+}
+
+#fos_user_change_password_form_plainPassword_first{
+    margin-left: 9.7em;
+    border-radius: 5px;
+    border: none;
+}
+
+#fos_user_change_password_form_plainPassword_second{
+    margin-left: 5em;
+    border-radius: 5px;
+    border: none;
+}
+
 /* CREATE AD */
 #createAd{
     background-color: antiquewhite;
