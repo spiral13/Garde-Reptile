@@ -45,6 +45,7 @@ class AdController extends Controller
         $ad = $this->getDoctrine()
             ->getRepository('AppBundle:Ad')
             ->find($id);
+
         if (!$ad) {
             throw $this->createNotFoundException(' Annonce non trouvée. ');
         }
@@ -93,7 +94,7 @@ class AdController extends Controller
      */
     public function ListOfferAction()
     {
-        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Offre');
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Offre', ['date'=>'DESC']);
 
         return $this->render('templates/offer.html.twig', [
             'ads' => $ads,
@@ -105,7 +106,7 @@ class AdController extends Controller
      */
     public function ListRequestAction()
     {
-        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande');
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande', ['date'=>'DESC']);
 
         return $this->render('templates/request.html.twig', [
             'ads' => $ads,
