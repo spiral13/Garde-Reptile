@@ -3,8 +3,11 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class ProfileType extends AbstractType
 {
@@ -13,6 +16,10 @@ class ProfileType extends AbstractType
         $builder->add('ville')
             ->add('description');
     }
+
+//    - - - - - - - - - - - -
+
+//    - - - - - - - - - - - -
 
     public function getParent()
     {
