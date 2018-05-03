@@ -83291,7 +83291,7 @@ var socketMiddleware = function socketMiddleware(store) {
     return function (action) {
       switch (action.type) {
         case WEBSOCKET_CONNECT:
-          socket = window.io();
+          socket = window.io('http://localhost:3000/');
           socket.on('send_message', function (message) {
             store.dispatch((0, _messages.receiveMessage)(message));
           });

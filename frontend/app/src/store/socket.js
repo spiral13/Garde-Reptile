@@ -21,7 +21,7 @@ let socket;
 const socketMiddleware = store => next => (action) => {
   switch (action.type) {
     case WEBSOCKET_CONNECT:
-      socket = window.io();
+      socket = window.io('http://localhost:3000/');
       socket.on('send_message', (message) => {
         store.dispatch(receiveMessage(message));
       });

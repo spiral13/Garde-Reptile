@@ -109,11 +109,11 @@ h1 {
 
 #messages {
   border-top: 1px solid #ccc;
-  height: calc(20vh - 10em);
+  height: calc(35vh - 1em);
   overflow-y: auto;
 }
 #messages .message {
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
 }
 #messages .message-content {
   font-size: 1.2em;
@@ -130,7 +130,7 @@ h1 {
   position: absolute;
   right: 0;
   bottom: 1.5em;
-  display: none;
+  display: flex;
   align-items: center;
   -webkit-transform: translateX(15em);
           transform: translateX(15em);
