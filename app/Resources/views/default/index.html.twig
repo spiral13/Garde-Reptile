@@ -27,15 +27,14 @@
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
 <div class="container" id="search">
     <nav class="navbar navbar-light col-sm-12">
-        <form class="form-inline m-auto">
-            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" aria-label="Search">
-            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" aria-label="Search">
-            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Nombre de visite" aria-label="Search">
+        <form class="form-inline m-auto" method="get" action="{{ path('search') }}">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" name="searchVille">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" name="searchService" aria-label="Search">
+            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Nombre de visite" name="searchNb" aria-label="Search">
             <button class="btn  btn-outline-dark my-2 my-sm-0 col-sm-2" type="submit">Rechercher</button>
         </form>
     </nav>
 </div>
-
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
     {# AFFICHAGE DES 4 DERNIERES ANNONCES PUBLIEES #}
     <h4 class="ml-5 mt-3"> Les 4 dernières annonces : </h4>

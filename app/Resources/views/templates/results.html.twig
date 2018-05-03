@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% for listresult in listresults %}
+        {{ listresult }}
+        {{ dump(listresult) }}
+{% endfor %}
+
+
+
+{% endblock %}
