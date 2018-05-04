@@ -19,6 +19,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use AppBundle\Entity\Ad;
 use AppBundle\Entity\Comments;
 use AppBundle\Form\CommentsType;
+use Symfony\Component\HttpFoundation\File\File;
 
 class AdController extends Controller
 {
@@ -120,25 +121,25 @@ class AdController extends Controller
      * @Route("/search", name="search")
      *
      */
-    public function SearchAction(Request $request)
-    {
-        $repository = $this->getDoctrine()
-        ->getRepository(Ad::class);
-
-        $query = $repository->createQueryBuilder('p')
-            ->where('p.ville > :ville')
-            ->setParameter('ville', 'searchVille')
-            ->orderBy('p.ville', 'ASC')
-            ->getQuery();
-
-        $listResultats = $query->getResult();
-// to get just one result:
-// $product = $query->setMaxResults(1)->getOneOrNullResult();
-
-            return $this->render('templates/results.html.twig', array(
-                'listresults' => $listResultats
-            ));
-
-    }
+//    public function SearchAction(Request $request)
+//    {
+//        $repository = $this->getDoctrine()
+//        ->getRepository(Ad::class);
+//
+//        $query = $repository->createQueryBuilder('p')
+//            ->where('p.ville > :ville')
+//            ->setParameter('ville', 'searchVille')
+//            ->orderBy('p.ville', 'ASC')
+//            ->getQuery();
+//
+//        $listResultats = $query->getResult();
+//// to get just one result:
+//// $product = $query->setMaxResults(1)->getOneOrNullResult();
+//
+//            return $this->render('templates/results.html.twig', array(
+//                'listresults' => $listResultats
+//            ));
+//
+//    }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }

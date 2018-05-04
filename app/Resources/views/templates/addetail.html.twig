@@ -6,6 +6,7 @@
 
     <h3>{{ ad.title }}</h3>
 
+    <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
     <p>Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
 
 
@@ -21,6 +22,7 @@
     <h4 class="ml-5 mt-5"> Vos commentaires :</h4>
         {% for comment in ad.comments %}
             <div class="container  mt-3 p-4" id="comms">
+                <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
                 <p><span class="text-primary">Commentaire de {{ comment.user.username }}, le {{ comment.publishedAt|
                         date('d/m/Y') }} :</span> </p>
                 <p>{{ comment.comment }}</p>

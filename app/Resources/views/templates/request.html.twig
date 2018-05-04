@@ -11,8 +11,7 @@
                 <a href="{{  path('ad_id', {'id': ad.id}) }}">
                     <h4 class="text-info" id="adsTitle">{{ad.title}}</h4>
                 </a>
-                <img src="https://images.unsplash.com/photo-1518321544536-00087d6ccea1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=59aad79163e6ce95775c3326f7693ec8"
-                     width="80" height="80">
+                <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
             </div>
             <p class="text-info">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
             <p class="text-warning font-italic" id="ville">Ville : {{ad.ville}}</p>

@@ -4,21 +4,25 @@
 namespace AppBundle\Form;
 
 use AppBundle\Entity\User;
+use AppBundle\Entity\Ad;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 
 class ProfileType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('ville')
-            ->add('description');
+            ->add('description')
+            ->add('image', FileType::class, array('label' => 'Image(JPG)', 'data_class' => null))
+        ;
     }
 
 //    - - - - - - - - - - - -
-
+ 
 //    - - - - - - - - - - - -
 
     public function getParent()

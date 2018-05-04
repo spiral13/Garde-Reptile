@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use AppBundle\Entity\Ad;
+
 
 /**
  * @ORM\Entity
@@ -57,8 +57,26 @@ class User extends BaseUser
     private $comments;
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Ajouter une image jpg")
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/gif" , "image/png"})
+     */
+    private $image;
 
-// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+// - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - - - -
     public function __construct()
     {
         parent::__construct();
@@ -129,7 +147,7 @@ class User extends BaseUser
     {
         $this->ads = $ads;
     }
-//    - - - - - - - - - - - - - - - - -
+
     /**
      * @return mixed
      */

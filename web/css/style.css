@@ -186,3 +186,10 @@
 #search button{
     font-weight: bold;
 }
+
+/* STYLE AVATAR */
+
+#avatar{
+    max-width: 6em;
+    max-height: 6em;
+}

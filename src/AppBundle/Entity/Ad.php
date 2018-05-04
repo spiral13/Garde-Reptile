@@ -65,6 +65,8 @@ class Ad
      * @ORM\OneToMany(targetEntity="Comments", mappedBy="ad")
      */
     private $comments;
+// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
+
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __toString()
@@ -219,5 +221,6 @@ class Ad
         $this->comments = $comments;
         return $this;
     }
+
 
 }

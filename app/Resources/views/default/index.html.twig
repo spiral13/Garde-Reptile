@@ -27,7 +27,7 @@
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
 <div class="container" id="search">
     <nav class="navbar navbar-light col-sm-12">
-        <form class="form-inline m-auto" method="get" action="{{ path('search') }}">
+        <form class="form-inline m-auto" method="get" action="">
             <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" name="searchVille">
             <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" name="searchService" aria-label="Search">
             <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Nombre de visite" name="searchNb" aria-label="Search">
@@ -45,8 +45,7 @@
 
         <div class="p-3 m-4 col-lg-5"  id="lastAd" >
         <div id="headads">
-            <img src="https://images.unsplash.com/photo-1518321544536-00087d6ccea1?ixlib=rb-0.3.5&q=90&fm=jpg&crop=entropy&cs=tinysrgb&w=200&h=200&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=59aad79163e6ce95775c3326f7693ec8"
-                 width="90" height="90" class="d-none d-sm-block">
+            <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
             <a href="{{  path('ad_id', {'id': ad.id}) }}">
                 <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
             </a>
