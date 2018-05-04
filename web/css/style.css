@@ -190,6 +190,8 @@
 /* STYLE AVATAR */
 
 #avatar{
+    margin: 1em;
     max-width: 6em;
     max-height: 6em;
+    border-radius: 3em;
 }

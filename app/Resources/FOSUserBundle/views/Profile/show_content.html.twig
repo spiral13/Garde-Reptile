@@ -8,11 +8,16 @@
 
     <div class="fos_user_user_show">
 
+        {% if user.image %}
+            <img src="{{ asset('uploads/images/' ~ user.image) }}" class="" id="avatar" alt="Photo de profil" >
+        {% else %}
+            <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="" id="avatar"  alt="">
+        {% endif %}
+
       <p> <span>{{ 'profile.show.username'|trans }}:</span>  {{ user.username }}</p>
       <p> <span>{{ 'profile.show.email'|trans }}:</span>  {{ user.email }}</p>
       <p> <span>Ville :</span>  {{ user.ville }}</p>
       <p> <span>Description :</span>  {{ user.description }}</p>
-        <img src="{{ asset('uploads/images/' ~ user.image) }}" height="100px" width="100px">
 
 
 

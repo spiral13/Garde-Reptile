@@ -17,7 +17,7 @@ class ProfileType extends AbstractType
     {
         $builder->add('ville')
             ->add('description')
-            ->add('image', FileType::class, array('label' => 'Image(JPG)', 'data_class' => null))
+            ->add('image', FileType::class, array('label' => 'Avatar', 'data_class' => null))
         ;
     }
 

@@ -3,10 +3,16 @@
 {% block body %}
 
 <div class="container border mt-5 " id="addetail">
-
+    <div id="headads">
     <h3>{{ ad.title }}</h3>
 
-    <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
+    {% if ad.user.image %}
+        <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar" alt="Photo de profil" >
+    {% else %}
+        <img src="http://via.placeholder.com/350x350" class="d-none d-sm-block" id="avatar"  alt="">
+    {% endif %}
+    </div>
+
     <p>Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
 
 
@@ -22,7 +28,13 @@
     <h4 class="ml-5 mt-5"> Vos commentaires :</h4>
         {% for comment in ad.comments %}
             <div class="container  mt-3 p-4" id="comms">
-                <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar">
+
+                {% if comment.user.image %}
+                    <img src="{{ asset('uploads/images/' ~ comment.user.image) }}" class="d-none d-sm-block" id="avatar" alt="Photo de profil" >
+                {% else %}
+                    <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="d-none d-sm-block" id="avatar"  alt="">
+                {% endif %}
+                
                 <p><span class="text-primary">Commentaire de {{ comment.user.username }}, le {{ comment.publishedAt|
                         date('d/m/Y') }} :</span> </p>
                 <p>{{ comment.comment }}</p>
