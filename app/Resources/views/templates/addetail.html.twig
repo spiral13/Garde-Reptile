@@ -34,14 +34,15 @@
                 {% else %}
                     <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="d-none d-sm-block" id="avatar"  alt="">
                 {% endif %}
-                
+
                 <p><span class="text-primary">Commentaire de {{ comment.user.username }}, le {{ comment.publishedAt|
                         date('d/m/Y') }} :</span> </p>
                 <p>{{ comment.comment }}</p>
             </div>
         {% endfor %}
 
-    {#{{ dump(app.user) }}#}
+
+  {#{{ dump(app.user) }}#}
     {#{{ dump(ad.user) }}#}
 
 

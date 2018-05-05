@@ -2,10 +2,17 @@
 
 {% block body %}
 
-    <div class="container form-group m-5">
+    <div class="container form-group col-xs-10" id="commStyle">
     {{ form_start(form) }}
 
-        <div class="form-group col-4 ">{{ form_row(form.comment, {'attr': {'class':'form-control'}})  }} </div>
+        <p class="d-none d-sm-block">Hello {{ app.user.username }}</p>
+        <div class="form-group ">{{ form_row(form.comment,
+            {
+                'label': 'Tapez votre commentaire ci dessous',
+                'attr': {'class': 'form-control'}
+            })
+            }}
+        </div>
 
         <button class="btn btn-primary" type="submit"> Commenter </button>
     {{ form_end(form) }}

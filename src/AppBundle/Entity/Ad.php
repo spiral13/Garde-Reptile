@@ -62,7 +62,7 @@ class Ad
     private $user;
 
     /**
-     * @ORM\OneToMany(targetEntity="Comments", mappedBy="ad")
+     * @ORM\OneToMany(targetEntity="Comments", mappedBy="ad", cascade={"remove"})
      */
     private $comments;
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -

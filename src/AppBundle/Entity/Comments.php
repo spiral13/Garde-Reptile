@@ -43,7 +43,7 @@ class Comments
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ad", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ad", inversedBy="comments", cascade={"remove"})
      * @ORM\JoinColumn(name="ad_id", referencedColumnName="id")
      */
     private $ad;
