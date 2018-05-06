@@ -70,16 +70,27 @@
         </div>
     {% endfor %}
 
+
     {% block body %}{% endblock %}
 
         <div id="root"></div>
 
-{# Ajout bouton Interface admin en bas de site si admin #}
-    {% if is_granted('ROLE_ADMIN') %}
-        <div class="fixed-bottom">
-            <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Interface Admin</a>
-        </div>
-    {% endif %}
+
+    {# seule solution trouvée pour faire une marge entre le contenu et le footer #}
+    <div class="mb-5"></div>
+
+    <div class="container-fluid m-0 p-3 fixed-bottom bg bg-primary" id="footer">
+        <a href="{{ path('cgu') }}" class="float-right mr-5"> CGU </a>
+    </div>
+
+        {# Ajout bouton Interface admin en bas de site si admin #}
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="fixed-bottom" id="adminButton">
+                <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Interface Admin</a>
+            </div>
+        {% endif %}
+
+
 
 
     {% block javascripts %}{% endblock %}
