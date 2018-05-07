@@ -15,6 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="ad")
+ *  @ORM\Entity(repositoryClass="AppBundle\Repository\AdRepository")
  */
 class Ad
 {

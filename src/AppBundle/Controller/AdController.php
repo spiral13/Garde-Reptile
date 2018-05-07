@@ -8,18 +8,14 @@
 
 namespace AppBundle\Controller;
 
-
+use AppBundle\Entity\Ad;
+use AppBundle\Entity\User;
 use AppBundle\Form\AdType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\User\UserInterface ;
 use Symfony\Component\Routing\Annotation\Route;
-use Doctrine\Common\Collections\ArrayCollection;
-use AppBundle\Entity\Ad;
-use AppBundle\Entity\Comments;
-use AppBundle\Form\CommentsType;
-use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\ORM\EntityManagerInterface;
 
 class AdController extends Controller
 {
@@ -110,6 +106,19 @@ class AdController extends Controller
         $ads = $this->getDoctrine()->getRepository(Ad::class)->findByService('Demande', ['date'=>'DESC']);
 
         return $this->render('templates/request.html.twig', [
+            'ads' => $ads,
+        ]);
+
+    }
+
+    /**
+     * @Route("/myads", name="my_ads")
+     */
+    public function AdUserAction(UserInterface $user)
+    {
+        $ads = $this->getDoctrine()->getRepository(Ad::class)->findByUserId($user);
+
+        return $this->render('templates/aduser.html.twig', [
             'ads' => $ads,
         ]);
 
