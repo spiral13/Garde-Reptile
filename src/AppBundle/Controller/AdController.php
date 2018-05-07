@@ -123,6 +123,11 @@ class AdController extends Controller
         ]);
 
     }
+
+    public function ()
+    {
+        
+    }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
