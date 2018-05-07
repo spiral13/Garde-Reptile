@@ -25,9 +25,14 @@
             <p class="">{{ad.content}}</p>
             <p class="badge badge-danger mt-3">{{ad.service}}</p>
 
-        <div class="float-right">
-        <button class="btn btn-primary" type="submit"> Modifier </button>
-        <button class="btn btn-danger" type="submit"> Supprimer </button>
+
+            <div class="float-right">
+                <a href="{{ path('my_ads_edit', {'id': ad.id}) }}" class="btn btn-primary btn-sm">
+                    Modifier
+                </a>
+                <a href="{{ path('my_ads_delete', {'id': ad.id}) }}" class="btn btn-secondary btn-sm"> Supprimer </a>
+            </div>
+            
         </div>
 
 

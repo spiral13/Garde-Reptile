@@ -12,6 +12,8 @@ use AppBundle\Entity\Ad;
 use AppBundle\Entity\User;
 use AppBundle\Form\AdType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface ;
 use Symfony\Component\Routing\Annotation\Route;
@@ -122,6 +124,68 @@ class AdController extends Controller
             'ads' => $ads,
         ]);
 
+    }
+
+    /**
+     * @Route("/myads/{id}/edit", name="my_ads_edit", requirements={"id"="\d+"})
+     * @ParamConverter("post")
+     */
+    public function editAdAction(Request $request, Ad $ad)
+    {
+
+        $deleteForm = $this->createDeleteForm($ad);
+        $editForm = $this->createForm('AppBundle\Form\AdType', $ad);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($ad);
+            $em->flush();
+            return $this->redirectToRoute('my_ads_edit', array('id' => $ad->getId()));
+        }
+
+        return $this->render('templates/editAd.html.twig', array(
+            'ad' => $ad,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a ad entity.
+     *
+     * @Route("myads/{id}/delete", name="my_ads_delete", requirements={"id"="\d+"})
+     * @Method("DELETE")
+     */
+    public function deleteAction(Request $request, Ad $ad)
+    {
+        $form = $this->createDeleteForm($ad);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($ad);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute('my_ads');
+    }
+
+
+    /**
+     * Creates a form to delete a ad entity.
+     *
+     * @param Ad $ad The ad entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createDeleteForm(Ad $ad)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('my_ads_delete', array('id' => $ad->getId())))
+            ->setMethod('DELETE')
+            ->getForm()
+            ;
     }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
