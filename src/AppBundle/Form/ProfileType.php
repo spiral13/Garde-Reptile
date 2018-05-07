@@ -16,7 +16,6 @@ class ProfileType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('ville')
-            ->add('description')
             ->add('image', FileType::class, array('label' => 'Avatar', 'data_class' => null))
         ;
     }

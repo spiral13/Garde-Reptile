@@ -42,11 +42,6 @@ class User extends BaseUser
     protected $ville;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    protected $description;
-
-    /**
      * @ORM\OneToMany(targetEntity="Ad", mappedBy="user")
      */
     private $ads;
@@ -90,23 +85,6 @@ class User extends BaseUser
 //        $this->getDescription();
 //        $this->getComment();
 //    }
-
-
-    /**
-     * @return mixed
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
 
     /**
      * @return mixed
