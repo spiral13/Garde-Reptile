@@ -19,7 +19,7 @@
     <p>Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
     <p>Service : {{ ad.service}} de garde</p>
-    <a href="#"><button class="mt-3 mb-3 btn btn-danger">Contacter {{ ad.user.username }}</button></a>
+    <a href="mailto:{{ ad.user.email }}" class="badge badge-secondary">{{ ad.user.email }}</a>
 </div>
 
 
