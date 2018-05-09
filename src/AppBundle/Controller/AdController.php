@@ -13,6 +13,7 @@ use AppBundle\Entity\Ad;
 use AppBundle\Entity\User;
 use AppBundle\Form\AdType;
 use AppBundle\Form\SearchType;
+use AppBundle\Repository\AdRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -208,21 +209,51 @@ class AdController extends Controller
         return $this->render('templates/search.html.twig', [
             'form' => $form->createView(),
         ]);
-    }
+    }    /**
+//     * @Route("/search", name="search")
+//     *
+//     */
+//    public function SearchAction()
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//        $result = $em->getRepository(Ad::class)->findLike('ville');
+//
+//
+//        return $this->render('templates/search.html.twig', [
+//            'result' => $result,
+//        ]);
+//
+//        dump($result);
+//
+//    }
 
     /**
      * @Route("/search", name="search")
-     *
+     * @Method({"GET", "POST"})
      */
-    public function SearchAction()
+    public function SearchAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $ads = $em->getRepository(Ad::class)->search($search);
+        $repository = $this->getDoctrine()
+        ->getRepository(Ad::class);
 
-        return $this->render('templates/search.html.twig', [
-            'ads' => $ads,
-        ]);
+        $listresults = [];
 
+        if (!empty($request->request->get('ville'))) {
+
+            $ville = $request->request->get('ville');
+            $service = null;
+
+            if (!empty($request->request->get('service'))) {
+                $service = $request->request->get('service');
+            }
+
+            $listresults = $repository->findLike($ville, $service);
+        }
+
+        return $this->render('templates/search.html.twig', array(
+            'listresults' => $listresults
+        ));
     }
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
 }

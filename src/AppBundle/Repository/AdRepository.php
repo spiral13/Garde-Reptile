@@ -20,17 +20,25 @@ class AdRepository extends \Doctrine\ORM\EntityRepository
         // On retourne le résultat de l'exécution de la requête
         return $query->getResult();
     }
-//
-//    public function findLike($ville)
-//    {
-//        $query = $this->createQueryBuilder('a')
-//            ->select('a')
-//            ->where('a.ville LIKE :ville')
-//            ->setParameter('ville', $ville)
-//            ->getQuery();
-//        $result = $query->getResult();
-//        return $result;
-//
-//    }
+
+    public function findLike($search, $service = null)
+    {
+        $queryBuilder = $this->createQueryBuilder('a')
+            ->select('a')
+            ->where('a.ville LIKE :ville')
+            ->setParameter('ville', $search);
+
+        if (!is_null($service)) {
+            $queryBuilder->andWhere('a.service = :service')
+                ->setParameter('service', $service);
+        }
+
+        $query = $queryBuilder->getQuery();
+
+        $result = $query->getResult();
+        return $result;
+
+    }
+
 
 }
