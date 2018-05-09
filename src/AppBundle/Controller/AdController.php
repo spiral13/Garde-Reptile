@@ -8,9 +8,11 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\AppBundle;
 use AppBundle\Entity\Ad;
 use AppBundle\Entity\User;
 use AppBundle\Form\AdType;
+use AppBundle\Form\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -18,6 +20,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\User\UserInterface ;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
+
 
 class AdController extends Controller
 {
@@ -129,6 +132,7 @@ class AdController extends Controller
     /**
      * @Route("/myads/{id}/edit", name="my_ads_edit")
      * @Method({"GET", "POST"})
+
      */
     public function editAdAction(Request $request, Ad $ad)
     {
@@ -197,30 +201,28 @@ class AdController extends Controller
     }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+    public function SearchViewAction()
+    {
+        $form = $this->createForm(new SearchType());
+
+        return $this->render('templates/search.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 
     /**
      * @Route("/search", name="search")
      *
      */
-//    public function SearchAction(Request $request)
-//    {
-//        $repository = $this->getDoctrine()
-//        ->getRepository(Ad::class);
-//
-//        $query = $repository->createQueryBuilder('p')
-//            ->where('p.ville > :ville')
-//            ->setParameter('ville', 'searchVille')
-//            ->orderBy('p.ville', 'ASC')
-//            ->getQuery();
-//
-//        $listResultats = $query->getResult();
-//// to get just one result:
-//// $product = $query->setMaxResults(1)->getOneOrNullResult();
-//
-//            return $this->render('templates/results.html.twig', array(
-//                'listresults' => $listResultats
-//            ));
-//
-//    }
+    public function SearchAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $ads = $em->getRepository(Ad::class)->search($search);
+
+        return $this->render('templates/search.html.twig', [
+            'ads' => $ads,
+        ]);
+
+    }
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }

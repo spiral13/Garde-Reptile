@@ -5,6 +5,11 @@
     <h3 class="mt-5 ml-5">Mes annonces</h3>
 
     <hr id="hr">
+    {% for message in app.flashes('warning') %}
+        <div class="flash-notice m-5 p-2 border border-success rounded bg-success text-white">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     {% for ad in ads %}
         <div class="container col-lg-6" id="listAd">
@@ -25,12 +30,16 @@
             <p class="">{{ad.content}}</p>
             <p class="badge badge-danger mt-3">{{ad.service}}</p>
 
+
             <div class="float-right">
                 <a href="{{ path('my_ads_edit', {'id': ad.id}) }}" class="btn btn-primary btn-sm">
                     Modifier ou supprimer
                 </a>
                 {#<a href="{{ path('my_ads_delete', {'id': ad.id}) }}" class="btn btn-secondary btn-sm"> Supprimer </a>#}
             </div>
+
+        </div>
+
 
         </div>
     {% endfor %}
