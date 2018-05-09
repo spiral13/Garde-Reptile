@@ -12,7 +12,8 @@ class AdRepository extends \Doctrine\ORM\EntityRepository
         $query = $this->getEntityManager()->createQuery(
             'SELECT a
             FROM AppBundle:Ad a
-            WHERE a.user= :user'
+            WHERE a.user= :user
+            ORDER BY a.date DESC'
         )->setParameter('user', $user->getId());
 
         // On retourne le résultat de l'exécution de la requête
