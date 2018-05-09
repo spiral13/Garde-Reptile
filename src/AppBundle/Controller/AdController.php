@@ -139,9 +139,13 @@ class AdController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            //$em->remove($ad);
             $em->flush();
-            return $this->redirectToRoute('my_ads_edit', array('id' => $ad->getId()));
+
+            $this->addFlash(
+                'notice',
+                'Annonce modifiée!');
+
+            return $this->redirectToRoute('my_ads', array('id' => $ad->getId()));
         }
 
         return $this->render('templates/editAd.html.twig', array(
@@ -166,6 +170,10 @@ class AdController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($ad);
             $em->flush();
+
+            $this->addFlash(
+                'warning',
+                'Annonce supprimée!');
         }
 
         return $this->redirectToRoute('my_ads');
