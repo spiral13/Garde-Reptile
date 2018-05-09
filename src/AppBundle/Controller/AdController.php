@@ -81,7 +81,7 @@ class AdController extends Controller
                 'notice',
                 'Annonce publiée!');
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('my_ads');
         }
 
         $formview = $form->createView();
