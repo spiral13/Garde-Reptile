@@ -36,8 +36,9 @@
 /* BACKGROUND AD HOMEPAGE */
 #indexcont{
     background-color: #78c2ad;
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 2em;
+    margin-top: 2em;
 }
 
 /* LOGIN FORM */
@@ -165,10 +166,14 @@
 }
 
 #comms{
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     box-shadow: 3px 11px 33px -6px darkgrey;
     border-radius: 10px;
     background-color: whitesmoke;
+}
+
+#titleCom{
+    margin-bottom: 2em;
 }
 
 /* STYLE SEARCH BAR */
@@ -177,14 +182,23 @@
     bottom: 1.2em;
 }
 
+#text{
+    color: #434343;
+    font-weight: bold;
+    margin: auto;
+}
+
 #search nav{
+    width: 70%;
     border-radius: 2px;
     background-color: darksalmon;
     box-shadow: 2px 2px 10px darkgrey;
+    margin: auto;
 }
 
 #search button{
     font-weight: bold;
+    padding: 0em;
 }
 
 /* STYLE AVATAR */
