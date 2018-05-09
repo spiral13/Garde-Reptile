@@ -130,8 +130,9 @@ class AdController extends Controller
     }
 
     /**
-     * @Route("/myads/{id}/edit", name="my_ads_edit", requirements={"id"="\d+"})
-     *
+     * @Route("/myads/{id}/edit", name="my_ads_edit")
+     * @Method({"GET", "POST"})
+
      */
     public function editAdAction(Request $request, Ad $ad)
     {
@@ -142,7 +143,7 @@ class AdController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->remove($ad);
+            //$em->remove($ad);
             $em->flush();
             return $this->redirectToRoute('my_ads_edit', array('id' => $ad->getId()));
         }
@@ -157,7 +158,7 @@ class AdController extends Controller
     /**
      * Deletes a ad entity.
      *
-     * @Route("myads/{id}/delete", name="my_ads_delete", requirements={"id"="\d+"})
+     * @Route("myads/{id}", name="my_ads_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Ad $ad)
