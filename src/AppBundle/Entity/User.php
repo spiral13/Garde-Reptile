@@ -53,9 +53,9 @@ class User extends BaseUser
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
-     * @Assert\NotBlank(message="Ajouter une image")
+     * 
      * @Assert\File(mimeTypes={ "image/jpeg", "image/gif" , "image/png"})
      */
     private $image;
