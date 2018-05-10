@@ -5,7 +5,7 @@
 
     <h3 class="mt-5 ml-5 pl-3">Publier votre annonce</h3>
 
-    <div class="container mt-2 pt-4 pb-3 pl-5 pr-5 border rounded" id="createAd">
+    <div class="container mt-2 pt-5 pb-2 pl-5 pr-5 border rounded mb-5" id="createAd">
     {{ form_start(form) }}
 
     <div class="form-group ">{{ form_row(form.title,
@@ -30,16 +30,16 @@
         </div>
         <div class="form-group col-md-4">{{ form_row(form.service, {'attr': {'class':'form-control'}})  }}</div>
     </div>
-    <div class="form-group">{{ form_row(form.content,
+    <div class="form-group mb-4">{{ form_row(form.content,
             {
                 'label': 'Votre annonce',
                 'attr': {'class': 'form-control'}
             })
-        }}</div>
-
+        }}
+    </div>
 
     <button class="btn btn-primary" type="submit"> Publier </button>
+
     {{ form_end(form) }}
-{#{{ dump(user) }}#}
 
 {% endblock %}

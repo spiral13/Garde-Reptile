@@ -13,12 +13,12 @@
     {% endif %}
     </div>
 
-    <p>Publiée par : {{ ad.user.username}} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
+    <p id="pub">Publiée par : <span class="text-secondary">{{ ad.user.username}}</span> le <span class="text-secondary"> {{ ad.date|date("d/m/Y") }}</span></p>
 
 
-    <p>Ville : {{ ad.ville }}</p>
+    <p id="city">Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
-    <p>Service : {{ ad.service}} de garde</p>
+    <p id="service">Service : {{ ad.service}} de garde</p>
     <a href="mailto:{{ ad.user.email }}" class="badge badge-secondary">{{ ad.user.email }}</a>
 </div>
 
