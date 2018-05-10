@@ -229,7 +229,7 @@
 
 /* STYLE FOOTER */
 #footer{
-    height: 3em;
+    height: 2.5em;
     background-color: #343434;
 }
 #footer a{
@@ -240,4 +240,14 @@
 /* STYLE OF CGU */
 #titleCgu{
     color: red;
+}
+
+/* STYLE OF TEAM PAGE */
+
+#team{
+    text-align: center;
+}
+
+#team .card{
+    margin: auto;
 }
