@@ -28,9 +28,14 @@
 <div class="container" id="search">
     <nav class="navbar navbar-light col-sm-12">
         <form class="form-inline m-auto" method="post" action="{{ path('search') }}">
-
+            <p id="text">Votre recherche :</p>
             <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" name="ville">
-            <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" name="service">
+            {#<input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" name="service">#}
+            <label id="text" for="service">Service</label><br />
+            <select class="form-control mr-sm-2 col-sm-3" name="service" id="service">
+                <option value="offre">Offre</option>
+                <option value="demande">Demande</option>
+            </select>
             <button class="btn  btn-outline-dark my-2 my-sm-0 col-sm-2" type="submit">Rechercher</button>
 
         </form>

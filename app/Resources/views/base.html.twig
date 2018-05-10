@@ -85,12 +85,8 @@
         {# Ajout bouton Interface admin en bas de site si admin #}
         {% if is_granted('ROLE_ADMIN') %}
 
-            <div class="fixed-bottom ml-2 mb-5" id="adminButton">
+            <div class="fixed-bottom ml-2 mb-2" id="adminButton">
                 <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Admin</a>
-
-            <div class="fixed-bottom ml-2" id="adminButton">
-                <a class="btn btn-danger btn-sm m-2 mb-5" href="{{ path('easyadmin') }}">Admin</a>
-            </div>
         {% endif %}
 
     <div class="container-fluid m-0 p-3 fixed-bottom" id="footer">
