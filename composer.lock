@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b9f1d3c1f9c108107020d704a8b69eb",
+    "content-hash": "d15736fb5d003ea77e36df276d59eef5",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -976,6 +976,53 @@
                 "rest"
             ],
             "time": "2016-10-17T18:31:11+00:00"
+        },
+        {
+            "name": "florianajir/datanova-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/florianajir/laposte-datanova-bundle.git",
+                "reference": "7abca6dfbaa7bfdf2ad89955a3ba68465ffe5517"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/florianajir/laposte-datanova-bundle/zipball/7abca6dfbaa7bfdf2ad89955a3ba68465ffe5517",
+                "reference": "7abca6dfbaa7bfdf2ad89955a3ba68465ffe5517",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "psr/log": "^1.0",
+                "symfony/framework-bundle": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phing/phing": "2.*",
+                "phploc/phploc": "2.*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "4.*",
+                "sebastian/phpcpd": "2.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Laposte\\DatanovaBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Ajir",
+                    "email": "florianajir@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "LaPoste DataNOVA OpenData API client and proxy",
+            "time": "2016-03-25T14:38:07+00:00"
         },
         {
             "name": "friendsofsymfony/user-bundle",
@@ -2670,7 +2717,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "florianajir/datanova-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

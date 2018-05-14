@@ -89,7 +89,7 @@
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 1em;
-    background-color: darkslategrey;
+    background-color: #506e85;
     color: white;
 }
 
@@ -267,7 +267,7 @@
 }
 
 #team h3{
-    background-color: #78c2ad;
+    background-color: #343f3c;
     color: white;
     font-weight: bold;
 }
