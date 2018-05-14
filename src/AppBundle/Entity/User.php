@@ -55,7 +55,7 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="string", nullable=true)
      *
-     * 
+     *
      * @Assert\File(mimeTypes={ "image/jpeg", "image/gif" , "image/png"})
      */
     private $image;
