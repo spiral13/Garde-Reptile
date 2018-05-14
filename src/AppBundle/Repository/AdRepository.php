@@ -5,6 +5,8 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\User;
 use AppBundle\Entity\Ad;
+use League\Csv\Reader;
+
 
 class AdRepository extends \Doctrine\ORM\EntityRepository
 {
@@ -39,6 +41,7 @@ class AdRepository extends \Doctrine\ORM\EntityRepository
         return $result;
 
     }
+
 
 
 }
