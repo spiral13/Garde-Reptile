@@ -205,24 +205,7 @@ class AdController extends Controller
         return $this->render('templates/search.html.twig', [
             'form' => $form->createView(),
         ]);
-    }    /**
-//     * @Route("/search", name="search")
-//     *
-//     */
-//    public function SearchAction()
-//    {
-//        $em = $this->getDoctrine()->getManager();
-//        $result = $em->getRepository(Ad::class)->findLike('ville');
-//
-//
-//        return $this->render('templates/search.html.twig', [
-//            'result' => $result,
-//        ]);
-//
-//        dump($result);
-//
-//    }
-
+    }
     /**
      * @Route("/search", name="search")
      * @Method({"GET", "POST"})
@@ -237,11 +220,8 @@ class AdController extends Controller
         if (!empty($request->request->get('ville'))) {
 
             $ville = $request->request->get('ville');
-            $service = null;
+            $service = $request->request->get('service');
 
-            if (!empty($request->request->get('service'))) {
-                $service = $request->request->get('service');
-            }
 
             $listresults = $repository->findLike($ville, $service);
         }
