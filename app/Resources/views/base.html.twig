@@ -74,11 +74,9 @@
         </div>
     {% endfor %}
 
-
     {% block body %}{% endblock %}
 
         <div id="root"></div>
-
 
     {# seule solution trouvée pour faire une marge entre le contenu et le footer #}
     <div class="mb-5"></div>
@@ -94,8 +92,6 @@
         <a href="{{ path('cgu') }}" class="float-right mr-3"> CGU </a>
         <a href="{{ path('team') }}" class="float-right mr-3"> TEAM </a>
     </div>
-
-
 
     {% block javascripts %}{% endblock %}
 		{#<script src="rAssets/js/app.js"></script>#}
