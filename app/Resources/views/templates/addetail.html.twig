@@ -15,13 +15,11 @@
 
     <p id="pub">Publiée par : <span class="text-secondary">{{ ad.user.username}}</span> le <span class="text-secondary"> {{ ad.date|date("d/m/Y") }}</span></p>
 
-
     <p id="city">Ville : {{ ad.ville }}</p>
     <p>{{ ad.content }}</p>
     <p id="service">Service : {{ ad.service}} de garde</p>
     <a href="mailto:{{ ad.user.email }}" class="badge badge-secondary">{{ ad.user.email }}</a>
 </div>
-
 
     <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class=" btn btn-info float-right col-xs-8 mb-5" id="adsComms">Laisser un commentaire</button></a>
     <hr class="mt-4" id="hr">
@@ -40,10 +38,5 @@
                 <p>{{ comment.comment }}</p>
             </div>
         {% endfor %}
-
-
-  {#{{ dump(app.user) }}#}
-    {#{{ dump(ad.user) }}#}
-
 
 {% endblock %}
