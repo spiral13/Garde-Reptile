@@ -5,9 +5,14 @@
     <h3 class="mt-5 ml-5">Résultat(s) de votre recherche:</h3>
     <hr id="hr">
 
+{% if listresults is empty %}
+    <div class="container col-lg-6" id="listAd">
+    <p class="text-center text-uppercase">Aucune annonce ne correspond à votre recherche</p>
+    </div>
+{% else %}
+
 {% for result in listresults %}
 
-    {#{{ dump(result) }}#}
     <div class="container col-lg-6" id="listAd">
         <div id="headads">
             <a href="{{  path('ad_id', {'id': result.id}) }}">
@@ -31,5 +36,7 @@
     </div>
 
 {% endfor %}
+
+{% endif %}
 
 {% endblock %}
