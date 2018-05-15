@@ -11,6 +11,10 @@
     box-shadow: -3px 10px 33px -6px rgba(0,0,0,0.75);
 }
 
+.navbar-brand{
+    font-weight: bold;
+}
+
 .navbar-light .navbar-nav .nav-item .nav-link {
     color: rgb(255, 255, 255);
 }
