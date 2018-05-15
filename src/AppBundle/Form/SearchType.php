@@ -24,8 +24,5 @@ class SearchType extends AbstractType
     {
         return 'appbundle_search';
     }
-// - - - - - - - - - - - - - - - - - - - - - -
-
-
 
 }

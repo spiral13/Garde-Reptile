@@ -78,14 +78,6 @@ class User extends BaseUser
         $this->ads = new ArrayCollection();
     }
 
-//    public function __toString()
-//    {
-//        $this->getComments();
-//        $this->getVille();
-//        $this->getDescription();
-//        $this->getComment();
-//    }
-
     /**
      * @return mixed
      */
@@ -141,11 +133,6 @@ class User extends BaseUser
     {
         $this->comments = $comments;
     }
-
-
-//    - - - - - - - - - - - - - - - - -
-
-
 
 
 }
