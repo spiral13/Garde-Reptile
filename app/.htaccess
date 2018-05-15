@@ -5,3 +5,8 @@
     Order deny,allow
     Deny from all
 </IfModule>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{THE_REQUEST} /Garde-Reptile/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+RewriteRule ^((?!Garde-Reptile/).*)$ Garde-Reptile/$1 [L,NC]
