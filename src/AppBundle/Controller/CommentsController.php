@@ -12,7 +12,6 @@ use AppBundle\Entity\Ad;
 use AppBundle\Form\CommentsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use AppBundle\Entity\Comments;
 
@@ -40,10 +39,6 @@ class CommentsController extends Controller
             $em->persist($user);
             $em->flush();
 
-//            $this->addFlash(
-//                'notice',
-//                'Commentaire publié. ');
-
             return $this->redirectToRoute('ad_id', ['id' => $ad->getId()]);
         }
 
@@ -53,7 +48,6 @@ class CommentsController extends Controller
             'form'=>$formview,
             'comment' => $comment,
         ));
-
 
     }
 

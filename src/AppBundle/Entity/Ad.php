@@ -66,8 +66,6 @@ class Ad
      * @ORM\OneToMany(targetEntity="Comments", mappedBy="ad", cascade={"remove"})
      */
     private $comments;
-// - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
-
 
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     public function __toString()
