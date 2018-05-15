@@ -1,8 +1,29 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+{#{{ dump(form.plainPassword.vars) }}#}
+<h3 class="mt-5 ml-5 pl-3">Inscrivez-vous sur ReptiGarde</h3>
+
+<div class="container mt-2 p-4 border rounded" id="register">
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
+
+    {#{{ form_widget(form) }}#}
+    <div class="form-group text-white">{{ form_row(form.username, {'attr': {'class':'form-control'}}) }}</div>
+
+    <div class="form-group text-white">{{ form_row(form.email, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="form-group text-white">{{ form_row(form.ville, {'attr': {'class':'form-control'}})  }}</div>
+
+    <div class="row form-group mt-4 ml-2 text-white">{{ form_row(form.plainPassword, {'attr': {'class':'form-control p-3'}})  }}</div>
+
     <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+        <input class="btn btn-primary" type="submit" id="_submit" value="{{ 'registration.submit'|trans }}" />
     </div>
+
 {{ form_end(form) }}
+</div>
+<div class="mr-3 mt-3" id="co">
+    <a href="{{ path('fos_user_security_login') }}">
+        <button class="btn btn-primary mr-5 float-right"> Connectez-vous</button>
+    </a>
+</div>
+

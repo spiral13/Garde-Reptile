@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h3 class="mt-5 ml-5">Mes annonces</h3>
+
+    <hr id="hr">
+    {% for message in app.flashes('warning') %}
+
+        <div class="flash-notice m-5 p-2 border border-secondary rounded bg-secondary text-white">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for ad in ads %}
+        <div class="container col-lg-6" id="listAd">
+            <div id="headads">
+                <a href="{{  path('ad_id', {'id': ad.id}) }}">
+                    <h4 class="text-info" id="adsTitle">{{ad.title}}</h4>
+                </a>
+
+                {% if ad.user.image %}
+                    <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar" alt="Photo de profil" >
+                {% else %}
+                    <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="d-none d-sm-block" id="avatar"  alt="">
+                {% endif %}
+
+            </div>
+            <p class="text-info">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
+            <p class="text-warning font-italic" id="ville">Ville : {{ad.ville}}</p>
+            <p class="">{{ad.content}}</p>
+            <p class="badge badge-danger mt-3">{{ad.service}}</p>
+
+            <div class="float-right">
+                <a href="{{ path('my_ads_edit', {'id': ad.id}) }}" class="btn btn-primary btn-sm">
+                    Modifier ou supprimer
+                </a>
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

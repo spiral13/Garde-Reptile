@@ -2,28 +2,103 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Bienvenue sur ReptiGarde !{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		{#<link rel="stylesheet" href="rAssets/css/app.css">#}
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/minty/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-    <p>TEST BASE</p>
+
+    {# NAV BAR #}
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="nav">
+        <a class="navbar-brand mr-5" href="{{ path('homepage') }}">REPTIGARDE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link mr-2" href="{{ path('homepage') }}">Accueil</a>
+                </li>
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('ad_offer') }}">Offres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('ad_request') }}">Demandes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('ads') }}">Annonces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('ad_create') }}">Créer votre annonce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Mon profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('my_ads') }}">Mes annonces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                </li>
+
+    {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_registration_register') }}">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('fos_user_security_login') }}">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
+
+    {% endif %}
+            </ul>
+        </div>
+     </nav>
+    {# END NAVBAR #}
 
 
+{# Ajout d'un message Annonce publiée  #}
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice m-5 p-2 border border-success rounded bg-success text-white">
+            {{ message }}
+        </div>
+    {% endfor %}
 
-    <div>
-        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-            <a href="{{ path('fos_user_security_logout') }}">
-                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-            </a>
-        {% else %}
-            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+    {% block body %}{% endblock %}
+
+        <div id="root"></div>
+
+    {# seule solution trouvée pour faire une marge entre le contenu et le footer #}
+    <div class="mb-5"></div>
+
+        {# Ajout bouton Interface admin en bas de site si admin #}
+        {% if is_granted('ROLE_ADMIN') %}
+
+            <div class="fixed-bottom ml-2 mb-5" id="adminButton">
+                <a class="btn btn-danger btn-sm m-2" href="{{ path('easyadmin') }}">Admin</a>
         {% endif %}
+
+    <div class="container-fluid m-0 p-3 fixed-bottom" id="footer">
+        <a href="{{ path('cgu') }}" class="float-right mr-3"> CGU </a>
+        <a href="{{ path('team') }}" class="float-right mr-3"> TEAM </a>
     </div>
 
+    {% block javascripts %}{% endblock %}
+		{#<script src="rAssets/js/app.js"></script>#}
+		{#<script>require('src/index');</script>#}
 
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </body>
 </html>

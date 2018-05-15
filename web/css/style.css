@@ -1,0 +1,347 @@
+#hello{
+    font-weight: bold;
+}
+
+#hr{
+    border-top: 2px solid #78c2ad;
+}
+
+/* STYLE of navbar*/
+#nav{
+    box-shadow: -3px 10px 33px -6px rgba(0,0,0,0.75);
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+#jumb
+{
+     box-shadow: -6px 7px 10px -6px;
+     font-weight: 900;
+     background-image: url("https://images.unsplash.com/photo-1523484362566-d2583a17bbb6?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=b45bc01350dca480fadc27185e293d44");
+}
+
+#jumb h2{
+    font-size: 2.5em;
+}
+
+ #jumb1{
+     box-shadow: -6px 7px 10px -6px;
+     font-weight: 900;
+     background-image: url("https://images.unsplash.com/photo-1475851624515-90a9a335785d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&h=400&fit=crop&ixid=eyJhcHBfaWQiOjF9&s=2c5b6f2fc0c47b065426fd9931e80343");
+ }
+
+#jumb1 h2{
+    font-size: 2.5em;
+}
+
+#slo {
+    font-size: 2em;
+}
+
+/* BACKGROUND AD HOMEPAGE */
+#indexcont{
+    background-color: #78c2ad;
+    border-radius: 3px;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+/* LOGIN FORM */
+#login{
+    background-color: currentColor;
+}
+
+#login label{
+    font-weight: bold;
+}
+
+#_submit{
+    font-weight: bold;
+}
+
+/* REGISTRATION FORM */
+#register{
+    background-color: currentColor;
+}
+
+#register label{
+    font-weight: bold;
+}
+
+/* Style of last Ad in HomePage*/
+#lastAd{
+    box-shadow: 10px 10px 33px -6px black;
+    /* border-radius: 10px; */
+    background-color: whitesmoke;
+}
+
+#adTitle{
+    text-align: center;
+    /*background-color: #d6fffa;*/
+    font-weight: bold;
+    padding: 1em;
+    color: #95d6c3;
+}
+
+/* Style of Ad in Ads List Page*/
+#listAd{
+    box-shadow: 10px 10px 33px -6px darkgrey;
+    border-radius: 3px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    padding: 1em;
+    background-color: #506e85;
+    color: white;
+}
+
+#adsTitle{
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+
+#headads{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headads img{
+    border-radius: 3em;
+}
+
+#ville{
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+
+/* My PROFIL  */
+
+#myprofil{
+    background-color: cadetblue;
+    color: white;
+    border-radius: 5px;
+}
+
+#myprofil span{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* EDIT PROFIL */
+
+#editProfil{
+    background-color: gainsboro;
+}
+
+/* CHANGE-PASSWORD*/
+#fos_user_change_password_form{
+    background-color: gainsboro;
+    border: none;
+    padding: 1em 1em 1.5em 1em;
+}
+
+#fos_user_change_password_form_current_password, #fos_user_change_password_form_plainPassword_first, #fos_user_change_password_form_plainPassword_second{
+    /*margin-left: 30%;*/
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+/* CREATE AD */
+#createAd{
+    background-color: antiquewhite;
+}
+
+/* STYLE DETAIL ADS PAGE*/
+
+#addetail{
+    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+     border-radius: 10px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    padding: 1em;
+}
+
+#addetail h3{
+    font-weight: bold;
+}
+
+#service{
+    font-weight: bold;
+}
+
+#city{
+    font-weight: bold;
+}
+
+#pub{
+    font-weight: bold;
+}
+
+/*  STYLE OF COMMENTS IN ADS DETAILS*/
+#adsComms{
+    margin-right: 1em;
+}
+
+#comms{
+    margin-bottom: 5em;
+    box-shadow: 3px 11px 33px -6px darkgrey;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+#titleCom{
+    margin-bottom: 2em;
+}
+
+/* STYLE SEARCH BAR */
+#search{
+    position: relative;
+    bottom: 1.2em;
+}
+
+#text{
+    color: #434343;
+    font-weight: bold;
+    margin: auto;
+}
+
+#search nav{
+    width: 70%;
+    border-radius: 2px;
+    background-color: darksalmon;
+    box-shadow: 2px 2px 10px darkgrey;
+    margin: auto;
+}
+
+#search button{
+    font-weight: bold;
+    padding: 0em;
+}
+
+/* STYLE AVATAR */
+
+#avatar{
+    margin: 1em;
+    max-width: 6em;
+    max-height: 6em;
+    border-radius: 3em;
+}
+
+/* STYLE COMMENTS FORM */
+#commStyle{
+    background-color: gainsboro;
+    padding: 1em;
+    border-radius: 5px;
+    margin: 3em auto ;
+}
+
+#commStyle p{
+    /*background-color: #f27d59;*/
+    border: 3px solid white;
+    color: white;
+    padding: 0.5em 0em;
+    width: 15%;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* STYLE FOOTER */
+#footer{
+    height: 2.5em;
+    background-color: #343434;
+}
+#footer a{
+    font-weight: bold;
+    color: #656d76;
+}
+
+/* STYLE OF CGU */
+#titleCgu{
+    color: red;
+}
+
+/* STYLE OF TEAM PAGE */
+
+#team{
+    text-align: center;
+    justify-content: center;
+}
+
+#team h3{
+    background-color: #343f3c;
+    color: white;
+    font-weight: bold;
+}
+
+#teamTitle{
+    color: white;
+    text-align: center;
+    /*font-weight: bold;*/
+    font-size: 2em;
+    background-color: #e38c8c;
+    border-radius: 3px;
+    margin-bottom: 2em;
+}
+
+/* STYLE BUTTON */
+
+#button{
+    border: 3px solid white;
+    color: white;
+    padding: 0.5em 0.5em;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#button:hover{
+    border: 3px solid #af8b4b;
+    background-color: #af8b4b;
+    color: white;
+    padding: 0.5em 0.5em;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+#co{
+    margin-bottom: 7em;
+}
+
+#imgteam{
+    height: auto;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+/* SOCIAL ICON TEAM PAGE*/
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+#social-tw:hover {
+    color: #4099FF;
+}
+#social-lk:hover {
+    color: #3B5998;
+}

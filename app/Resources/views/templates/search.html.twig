@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h3 class="mt-5 ml-5">Résultat(s) de votre recherche:</h3>
+    <hr id="hr">
+
+{% if listresults is empty %}
+    <div class="container col-lg-6" id="listAd">
+    <p class="text-center text-uppercase">Aucune annonce ne correspond à votre recherche</p>
+    </div>
+{% else %}
+
+{% for result in listresults %}
+
+    <div class="container col-lg-6" id="listAd">
+        <div id="headads">
+            <a href="{{  path('ad_id', {'id': result.id}) }}">
+                <h4 class="text-info" id="adsTitle">{{result.title}}</h4>
+            </a>
+
+            {% if result.user.image %}
+                <img src="{{ asset('uploads/images/' ~ result.user.image) }}" class="d-none d-sm-block" id="avatar"
+                     alt="Photo de profil" >
+            {% else %}
+                <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="d-none d-sm-block" id="avatar"  alt="">
+            {% endif %}
+
+        </div>
+        <p class="text-info">Publiée par : {{ result.user.username }} <span class="text-secondary">le {{ result
+                .date|date
+                ("d/m/Y") }}</span></p>
+        <p class="text-warning font-italic" id="ville">Ville : {{result.ville}}</p>
+        <p class="">{{result.content}}</p>
+        <p class="badge badge-danger mt-3">{{result.service}}</p>
+    </div>
+
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

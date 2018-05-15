@@ -6,7 +6,8 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
+    images_directory: '%kernel.root_dir%/../web/uploads/images'
 
 framework:
     #esi: ~
@@ -74,7 +75,16 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+    profile:
+            form:
+                type: AppBundle\Form\ProfileType
+    registration:
+            form:
+                type: AppBundle\Form\RegistrationType
+
 
 easy_admin:
     entities:
         - AppBundle\Entity\User
+        - AppBundle\Entity\Ad
+        - AppBundle\Entity\Comments
