@@ -52,6 +52,11 @@ class Comments
     {
         return $this->getComment();
     }
+
+    public function __construct()
+    {
+        $this->publishedAt = new \Datetime();
+    }
 // - - - - - - - - - -  - - - - - - - - - -  --  - - --  - -- - - - - - - - - - - - -
     /**
      * Get id
