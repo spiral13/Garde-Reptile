@@ -10,6 +10,7 @@
 /* STYLE of navbar*/
 #nav{
     box-shadow: -3px 10px 33px -6px rgba(0,0,0,0.75);
+    border-radius: 1px;
 }
 
 .navbar-brand{
@@ -60,11 +61,12 @@
 
 /* LOGIN FORM */
 #login{
-    background-color: currentColor;
+    background-color: darkgrey;
 }
 
 #login label{
     font-weight: bold;
+    margin: 0.5em;
 }
 
 #_submit{
@@ -73,7 +75,7 @@
 
 /* REGISTRATION FORM */
 #register{
-    background-color: currentColor;
+    background-color: darkgrey;
 }
 
 #register label{
