@@ -14,9 +14,9 @@
             <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="" id="avatar"  alt="Photo de profil">
         {% endif %}
 
-      <p> <span>{{ 'profile.show.username'|trans }}:</span>  {{ user.username }}</p>
-      <p> <span>{{ 'profile.show.email'|trans }}:</span>  {{ user.email }}</p>
-      <p> <span>Ville :</span>  {{ user.ville }}</p>
+      <p> <span class="text-secondary">{{ 'profile.show.username'|trans }} :</span>  <span id="mypro">{{ user.username }}</span></p>
+      <p> <span class="text-secondary">{{ 'profile.show.email'|trans }} :</span>  <span id="mypro">{{ user.email }}</span></p>
+      <p> <span class="text-secondary">Ville : </span>  <span id="mypro">{{ user.ville }}</span></p>
 
 
     </div>

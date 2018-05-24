@@ -27,7 +27,7 @@
 {# - - - - - - - -  - - - - - - - - - - - - - - - - - - - -  -- - - - - - - - - - - - - - #}
 <div class="container" id="search">
     <nav class="navbar navbar-light col-sm-12">
-        <form class="form-inline m-auto" method="post" action="{{ path('search') }}">
+        <form class="form-inline m-auto" id="formsearch" method="post" action="{{ path('search') }}">
             <p id="text">Votre recherche :</p>
             <input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Ville" name="ville">
             {#<input class="form-control mr-sm-2 col-sm-3" type="search" placeholder="Service" name="service">#}
@@ -59,14 +59,14 @@
             {% endif %}
 
             <a href="{{  path('ad_id', {'id': ad.id}) }}">
-                <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
+                <h3 class="mb-4 text-uppercase text-success" id="adsTitle">{{ad.title}}</h3>
             </a>
         </div>
             <p class="text-primary">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span> </p>
-            <p class="text-info">{{ad.content}}</p>
-            <p class="text-warning font-italic">{{ad.ville}}</p>
+            <p class="text-info" id="adscontent">{{ad.content}}</p>
+            <p class="text-danger font-italic">{{ad.ville}}</p>
             {#<p>{{question.date}}</p>#}
-            <p class="badge badge-info mt-3">{{ad.service}}</p>
+            <p class="badge badge-info mt-3" id="badge">{{ad.service}}</p>
         </div>
     {% endfor %}
     </div>
@@ -82,14 +82,14 @@
                         <img src="https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png" class="d-none d-sm-block" id="avatar"  alt="">
                     {% endif %}
                 <a href="{{ path('fos_user_security_login') }}">
-                    <h3 class="mb-4 text-uppercase" id="adTitle">{{ad.title}}</h3>
+                    <h3 class="mb-4 text-uppercase text-success" id="adsTitle">{{ad.title}}</h3>
                 </a>
                 </div>
                 <p class="text-primary">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
-                <p class="text-info">{{ad.content}}</p>
-                <p class="text-warning font-italic">{{ad.ville}}</p>
+                <p class="text-info" id="adscontent">{{ad.content}}</p>
+                <p class="text-danger font-italic">{{ad.ville}}</p>
                 {#<p>{{question.date}}</p>#}
-                <p class="badge badge-info mt-3">{{ad.service}}</p>
+                <p class="badge badge-info mt-3" id="badge">{{ad.service}}</p>
             </div>
         {% endfor %}
     </div>

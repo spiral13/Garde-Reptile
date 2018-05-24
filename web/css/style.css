@@ -1,3 +1,4 @@
+
 #hello{
     font-weight: bold;
 }
@@ -13,6 +14,10 @@
 
 .navbar-brand{
     font-weight: bold;
+}
+
+.navbar-light .navbar-brand{
+    font-size: 2em;
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
@@ -42,6 +47,7 @@
 
 #slo {
     font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* BACKGROUND AD HOMEPAGE */
@@ -91,17 +97,24 @@
 
 /* Style of Ad in Ads List Page*/
 #listAd{
-    box-shadow: 10px 10px 33px -6px darkgrey;
+    box-shadow: 10px 10px 33px -6px #b6b6b6;
     border-radius: 3px;
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 1em;
-    background-color: #506e85;
+    background-color: #ccdae5;
     color: white;
 }
 
 #adsTitle{
     padding: 0.5em 0.5em 0.5em 0em;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#adscontent{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2b2b2b;
 }
 
 #headads{
@@ -126,9 +139,25 @@
     border-radius: 5px;
 }
 
+#mypro{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #myprofil span{
     font-weight: bold;
     font-size: 1.3em;
+}
+
+#badge{
+    font-weight: bold;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#editAd{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1em;
+    font-weight: bold;
 }
 
 /* EDIT PROFIL */
@@ -160,7 +189,7 @@
 
 #addetail{
     box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
-     border-radius: 10px;
+    border-radius: 10px;
     margin-top: 2em;
     margin-bottom: 3em;
     padding: 1em;
@@ -170,17 +199,35 @@
     font-weight: bold;
 }
 
+#content{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1.5em 0em 2em 0em;
+}
+
 #service{
     font-weight: bold;
+    font-size: 1.3em;
+    color: #1b951e;
 }
 
 #city{
     font-weight: bold;
+    font-size: 1.3em;
+    color: #1c9525;
 }
 
 #pub{
     font-weight: bold;
+    font-size: 1.2em;
+    color: #17a2b8;
 }
+
+#mail{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /*  STYLE OF COMMENTS IN ADS DETAILS*/
 #adsComms{
@@ -208,10 +255,15 @@
     color: #434343;
     font-weight: bold;
     margin: auto;
+    font-size: 1.3em;
+}
+
+#formsearch{
+    width: 90%;
 }
 
 #search nav{
-    width: 70%;
+    width: 90%;
     border-radius: 2px;
     background-color: darksalmon;
     box-shadow: 2px 2px 10px darkgrey;

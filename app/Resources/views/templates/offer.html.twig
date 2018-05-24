@@ -9,7 +9,7 @@
         <div class="container col-lg-6" id="listAd">
             <div id="headads">
                 <a href="{{  path('ad_id', {'id': ad.id}) }}">
-                    <h4 class="text-info" id="adsTitle">{{ad.title}}</h4>
+                    <h4 class="text-success" id="adsTitle">{{ad.title}}</h4>
                 </a>
 
                 {% if ad.user.image %}
@@ -20,9 +20,9 @@
 
             </div>
             <p class="text-info">Publiée par : {{ ad.user.username }} <span class="text-secondary">le {{ ad.date|date("d/m/Y") }}</span></p>
-            <p class="text-warning font-italic" id="ville">Ville : {{ad.ville}}</p>
-            <p class="">{{ad.content}}</p>
-            <p class="badge badge-danger mt-3">{{ad.service}}</p>
+            <p class="text-danger font-italic" id="ville">Ville : {{ad.ville}}</p>
+            <p id="adscontent">{{ad.content}}</p>
+            <p class="badge badge-danger mt-3" id="badge">{{ad.service}}</p>
         </div>
     {% endfor %}
 

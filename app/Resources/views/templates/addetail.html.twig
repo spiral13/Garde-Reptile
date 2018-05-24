@@ -4,7 +4,7 @@
 
 <div class="container border mt-5 " id="addetail">
     <div id="headads">
-    <h3>{{ ad.title }}</h3>
+    <h3 class="text-success">{{ ad.title }}</h3>
 
     {% if ad.user.image %}
         <img src="{{ asset('uploads/images/' ~ ad.user.image) }}" class="d-none d-sm-block" id="avatar" alt="Photo de profil" >
@@ -13,12 +13,13 @@
     {% endif %}
     </div>
 
-    <p id="pub">Publiée par : <span class="text-secondary">{{ ad.user.username}}</span> le <span class="text-secondary"> {{ ad.date|date("d/m/Y") }}</span></p>
+    <p id="pub">Publiée par : <span class="text-primary">{{ ad.user.username}}</span> le <span class="text-secondary"> {{ ad.date|date("d/m/Y") }}</span></p>
 
-    <p id="city">Ville : {{ ad.ville }}</p>
-    <p>{{ ad.content }}</p>
-    <p id="service">Service : {{ ad.service}} de garde</p>
-    <a href="mailto:{{ ad.user.email }}" class="badge badge-secondary">{{ ad.user.email }}</a>
+    <p id="city">Ville : <span class="text-secondary">{{ ad.ville }}</span></p>
+    <p id="service">Service : <span class="text-secondary">{{ ad.service}} de garde</span></p>
+    <p id="content">{{ ad.content }}</p>
+
+    <a href="mailto:{{ ad.user.email }}" class="badge badge-success" id="mail">{{ ad.user.email }}</a>
 </div>
 
     <a href="{{ path('ad_comment', {'id': ad.id}) }}"><button class=" btn btn-info float-right col-xs-8 mb-5" id="adsComms">Laisser un commentaire</button></a>
